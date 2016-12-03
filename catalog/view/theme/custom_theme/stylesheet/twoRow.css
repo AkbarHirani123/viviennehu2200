@@ -1,8 +1,12 @@
 /* v3.0 One Row Navigation Final */
 
-a{
-	color: #555;
+a {
+	color: white;
 	letter-spacing: 1.5px;
+}
+
+.dropdown li a {
+	color: #555;
 }
 
 .dropdown-menu li > a:hover {
@@ -12,12 +16,29 @@ a{
      background-image: none; 
 }
 
+.navbar-inverse {
+	text-align: center;
+	position: fixed;
+	z-index: 10;
+	margin-top: -110px;
+}
+
+.navbar-inverse .navbar-collapse {
+	padding-bottom: 10px;
+	width: 50%;
+    margin: auto;
+}
+
+.navbar-inverse + div {
+	margin-top: 110px;
+}
+
 /* Media Query for mobile 300px screen to 748px */
 @media (min-width: 330px) {
 
-	body {
+	/*body {
 		margin-top: 100px;
-	}
+	}*/
 
 	.navbar.navbar-inverse {
 		height: 100px;
@@ -101,9 +122,9 @@ a{
 
 /* Media Query for desktop 300px screen to 748px */
 @media (min-width: 768px) {
-	body {
+	/*body {
 		margin-top: 0px;
-	}
+	}*/
 
 	/* make navbar inverse */
 	.navbar.navbar-inverse.navbar-fixed-top {
@@ -186,9 +207,9 @@ a{
 
 	/* Logo size in the Navigation */
 	.logo {
-		width: auto;
-		height: 80px;
-		margin-top: 5px;
+		width: 35%;
+    	height: auto;
+		margin-top: 15px;
 		display: inline-block;
 
 	}
