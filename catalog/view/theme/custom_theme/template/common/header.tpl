@@ -24,6 +24,7 @@
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/custom_theme/stylesheet/stylesheet.css" rel="stylesheet">
 <link href="catalog/view/theme/custom_theme/stylesheet/twoRow.css" rel="stylesheet">
+<link href="catalog/view/theme/custom_theme/stylesheet/style.css" rel="stylesheet">
 <link href="catalog/view/theme/custom_theme/stylesheet/homepage.css" rel="stylesheet">
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
@@ -103,11 +104,11 @@
                 <?php $class = 12 / sizeof($categories) ?>
                 <?php foreach ($categories as $category) { ?>
                 <?php if ($category['children']) { ?>
-                <li class="dropdown col-md-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $category['name']; ?></a>
+                <li class="dropdown col-md-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo strtoupper($category['name']); ?></a>
                   <div class="dropdown-menu">
                     <div class="dropdown-inner">
                       <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
-                      <ul class="list-unstyled">
+                      <ul>
                         <?php foreach ($children as $child) { ?>
                         <li><a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
                         <?php } ?>
@@ -117,7 +118,7 @@
                     <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div>
                 </li>
                 <?php } else { ?>
-                <li class="col-md-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+                <li class="col-md-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>"><?php echo strtoupper($category['name']); ?></a></li>
                 <?php } ?>
                 <?php } ?>
               </div>
