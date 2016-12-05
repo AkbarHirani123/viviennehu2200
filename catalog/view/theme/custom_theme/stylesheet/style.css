@@ -42,7 +42,7 @@ html, body {
 	background-color: transparent;
 }
 
-.breadcrumbs a {
+.breadcrumb a {
 	text-decoration: none;
 	color: #555;
 }
@@ -403,4 +403,24 @@ now override the 3.3 new styles for modern browsers & apply opacity
 .sort-options {
 	height: 30px;
 	width: 50px;
+}
+
+.thumbnail {
+	border: none;
+}
+
+.image-additional a {
+	padding: 0;
+	margin: 10px;
+	border: none;
+}
+
+.image-additional img {
+	height: 150px;
+	width: 100px;
+}
+
+.product-info h1, h2 {
+	font-size: 20px;
+	padding-bottom: 10px;
 }

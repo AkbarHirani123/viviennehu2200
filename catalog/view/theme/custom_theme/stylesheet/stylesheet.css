@@ -726,9 +726,9 @@ h2.price {
 	display: block;
 	border: 1px solid #ddd;
 }
-.image-additional {
+/*.image-additional {
 	max-width: 78px;
-}
+}*/
 .thumbnails .image-additional {
 	float: left;
 	margin-left: 20px;
