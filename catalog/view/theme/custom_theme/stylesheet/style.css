@@ -197,14 +197,12 @@ div.pic-modal img{
 }
 
 .quick-view-container {
-	width: 270px;
-	height: auto;
     overflow: hidden;
     vertical-align: top;
     display: inline-block;
 }
 
-.modal .quick-view-main {
+.quick-view-main {
 	-webkit-transition: transform .5s ease-out;
     -moz-transition: transform .5s ease-out;
     -o-transition: transform .5s ease-out;
@@ -416,8 +414,8 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 .image-additional img {
-	height: 150px;
-	width: 100px;
+	/*height: 150px;
+	width: 100px;*/
 }
 
 .product-info h1, h2 {

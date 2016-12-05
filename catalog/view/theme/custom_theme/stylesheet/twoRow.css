@@ -1,6 +1,6 @@
 /* v3.0 One Row Navigation Final */
 
-a {
+.navbar-inverse a {
 	color: white;
 	letter-spacing: 1.5px;
 }
