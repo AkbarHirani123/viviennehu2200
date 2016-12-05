@@ -24,7 +24,7 @@
         <div class="col-sm-6">
           <div class="quick-view-container">
           <?php if ($thumb) { ?>
-          <li><a class="thumbnail" href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>"><img class="quick-view-main" src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+          <img class="quick-view-main" src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
           <?php } ?>
           </div>
         </div>
