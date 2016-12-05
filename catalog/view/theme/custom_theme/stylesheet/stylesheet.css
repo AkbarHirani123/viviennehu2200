@@ -601,8 +601,8 @@ footer h5 {
 	font-weight: bold;
 }
 .product-thumb .caption {
-	padding: 0 20px;
-	min-height: 180px;
+	padding: 10px 20px;
+	min-height: 80px;
 }
 .product-list .product-thumb .caption {
 	margin-left: 230px;

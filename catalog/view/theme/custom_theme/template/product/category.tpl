@@ -20,9 +20,6 @@
         <?php if ($thumb) { ?>
         <div class="col-sm-2"></div>
         <?php } ?>
-        <?php if ($description) { ?>
-        <div class="col-sm-10"><?php echo $description; ?></div>
-        <?php } ?>
       </div>
       <hr>
       <?php } ?>
@@ -33,6 +30,9 @@
         <div class="col-sm-3">
           <ul>
             <?php foreach ($categories as $category) { ?>
+            <?php if ($thumb) { echo $thumb; ?>
+              <img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" title="<?php echo $heading_title; ?>" class="img-thumbnail" />
+            <?php } ?>
             <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
             <?php } ?>
           </ul>
@@ -44,6 +44,9 @@
         <div class="col-sm-3">
           <ul>
             <?php foreach ($categories as $category) { ?>
+              <?php if ($category['image']) { echo $category['image']; ?>
+                <img src="<?php echo $category['image']; ?>" alt="<?php echo $heading_title; ?>" title="<?php echo $heading_title; ?>" class="img-thumbnail" />
+              <?php } ?>
             <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
             <?php } ?>
           </ul>
@@ -149,3 +152,6 @@
     <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>
+
+
+Notice: Undefined index: image in /Applications/MAMP/htdocs/2200/catalog/view/theme/custom_theme/template/product/category.tpl on line 50
