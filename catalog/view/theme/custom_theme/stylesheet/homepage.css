@@ -7,3 +7,16 @@
 	width:100%;
 	height:auto;
 }
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.add-shadow {
+	margin: auto;
+    max-height: 100vh;
+    max-width: auto;
+	-webkit-filter: drop-shadow(30px 30px 7px #222);
+	filter: drop-shadow(30px 30px 7px #222);
+}
