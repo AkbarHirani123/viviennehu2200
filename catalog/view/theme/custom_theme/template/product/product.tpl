@@ -12,7 +12,7 @@
         <?php } else { ?>
         <?php $class = 'col-sm-8'; ?>
         <?php } ?>
-        <div class="col-sm-1 col-sm-offset-1">
+        <div class="col-sm-2">
           <?php if ($images) { ?>
             <ul class="image-additional">
               <?php foreach ($images as $image) { ?>
