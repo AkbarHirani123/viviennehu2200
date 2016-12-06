@@ -422,3 +422,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	font-size: 20px;
 	padding-bottom: 10px;
 }
+
+#search input {
+	display: none;
+}

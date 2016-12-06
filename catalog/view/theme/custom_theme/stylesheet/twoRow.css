@@ -21,16 +21,48 @@
 	position: fixed;
 	z-index: 10;
 	margin-top: -110px;
+	width: 100%;
 }
 
 .navbar-inverse .navbar-collapse {
-	padding-bottom: 10px;
-	width: 50%;
+	padding-top: 45px;
     margin: auto;
 }
 
-.navbar-inverse + div {
+.lower-nav + div {
 	margin-top: 110px;
+}
+
+.lower-nav {
+	width: 10%;
+	float: right;
+	margin-top: 15px;
+}
+
+.lower-nav li {
+	display: inline;
+	float: left;
+	width: 25%;
+	/*transition: all 3s ease;*/
+}
+
+.lower-nav li a {
+	color: #555;
+}
+
+.lower-nav .dropdown li {
+	float: none;
+}
+
+.fa {
+	font-size: 20px;
+}
+
+#search input {
+	position: absolute;
+	right: 40px;
+	width: 300px;
+	border: 1px solid #555;
 }
 
 /* Media Query for mobile 300px screen to 748px */
@@ -48,6 +80,8 @@
 	.dropdown-menu {
 		border-radius: 0px;
 		border: none;
+		padding: 10px 15px;
+		top: 0px;
 	}
 
 	.nav-justified {
@@ -207,11 +241,8 @@
 
 	/* Logo size in the Navigation */
 	.logo {
-		width: 35%;
+		width: 15%;
     	height: auto;
-		margin-top: 15px;
-		display: inline-block;
-
 	}
 
 	.logo-name {

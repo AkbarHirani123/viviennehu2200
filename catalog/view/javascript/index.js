@@ -52,8 +52,8 @@ $(document).ready(function() {
 	});
 
 
-	$('#sort-toggle').click(function() {
-		$('#sort-content').css('display', 'block');
+	$('#search-toggle').click(function() {
+		$('#search input').toggle();
 	});
 
 	// show back view when mouse stays on object

@@ -16,7 +16,7 @@
           <?php if ($images) { ?>
             <ul class="image-additional">
               <?php foreach ($images as $image) { ?>
-              <li><a class="thumbnail" href="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>"> <img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></li>
+              <li><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></li>
               <?php } ?>
             </ul> 
           <?php } ?>
