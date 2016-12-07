@@ -14,7 +14,32 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h2><?php echo $heading_title; ?></h2>
+      
+      <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+          <h2><?php echo $heading_title; ?></h2>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6 text-right">
+          <div class="dropdown">
+            <p class="sort dropdown-toggle">Sort By</p>
+            <ul class="dropdown-menu sort-content">
+              <?php foreach ($sorts as $sorts) { ?>
+                <li><a href="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></a></li>
+              <?php } ?>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6 text-right">
+          <div class="dropdown">
+            <p class="sort dropdown-toggle">View</p>
+            <ul class="dropdown-menu sort-content">
+              <?php foreach ($limits as $limits) { ?>
+                <li><a href="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></a></li>
+              <?php } ?>
+            </ul>
+          </div>
+        </div>
+      </div>
       <?php if ($thumb || $description) { ?>
       <div class="row">
         <?php if ($thumb) { ?>
@@ -56,43 +81,7 @@
       <?php } ?>
       <?php } ?>
       <?php if ($products) { ?>
-      <div class="row">
-        <!-- <div class="col-md-2 text-right">
-          <label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
-        </div> -->
-        <div class="col-md-2 col-xs-6 col-md-offset-6 text-right">
-          <div class="dropdown">
-            <p class="sort dropdown-toggle">Sort By</p>
-            <ul class="dropdown-menu sort-content">
-              <?php foreach ($sorts as $sorts) { ?>
-                <li><a href="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></a></li>
-              <?php } ?>
-            </ul>
-          </div>
-        </div>
-        <!-- <div class="col-md-1 text-right">
-          <label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>
-        </div> -->
-        <div class="col-md-2 col-xs-6 text-right">
-          <div class="dropdown">
-            <p class="sort dropdown-toggle">View</p>
-            <ul class="dropdown-menu sort-content">
-              <?php foreach ($limits as $limits) { ?>
-                <li><a href="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></a></li>
-              <?php } ?>
-            </ul>
-          </div>
-          <!-- <select id="input-limit" class="form-control" onchange="location = this.value;">
-            <?php foreach ($limits as $limits) { ?>
-            <?php if ($limits['value'] == $limit) { ?>
-            <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
-            <?php } else { ?>
-            <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
-            <?php } ?>
-            <?php } ?>
-          </select> -->
-        </div>
-      </div>
+      
       <br />
       <div class="row">
         <?php foreach ($products as $product) { ?>

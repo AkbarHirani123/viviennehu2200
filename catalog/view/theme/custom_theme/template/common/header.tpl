@@ -53,7 +53,7 @@
 <header class="navbar-inverse">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-md-5 col-sm-4 col-xs-6">
         <div class="logo">
           <?php if ($logo) { ?>
           <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
@@ -62,8 +62,8 @@
           <?php } ?>
         </div>
       </div>
-      <div class="col-sm-6">
-        <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
+      <div class="col-md-7 col-sm-8 col-xs-6">
+        <div class="navbar-header">
           <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -72,10 +72,9 @@
             <?php foreach ($categories as $category) { ?>
             <?php if ($category['children']) { ?>
             <li class="dropdown col-sm-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo strtoupper($category['name']); ?></a>
-              <div class="dropdown-menu">
                 <div class="dropdown-inner">
                   <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
-                  <ul>
+                  <ul class="dropdown-menu">
                     <?php foreach ($children as $child) { ?>
                     <li><a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
                     <?php } ?>
@@ -83,7 +82,6 @@
                   <?php } ?>
                 <!-- <li><a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a></li> -->
                 </div>
-              </div>
             </li>
             <?php } else { ?>
             <li class="col-sm-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>"><?php echo strtoupper($category['name']); ?></a></li>

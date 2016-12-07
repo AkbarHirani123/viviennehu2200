@@ -395,7 +395,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	height: 100px;
 	width: 300px
 	box-shadow: 0 6px 12px rgba(0,0,0,.175);*/
-	/*left: 90px;*/
+	left: 90px;
 }
 
 .sort-options {
@@ -425,4 +425,8 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 #search input {
 	display: none;
+}
+
+#content .dropdown, #content .dropdown-toggle,
+#content .dropdown-menu, #content .dropdown:hover {
 }
