@@ -71,4 +71,8 @@ $(document).ready(function() {
 		$(this).fadeOut(400);
 		$(this).prev().delay(400).fadeIn(600);
 	});
+
+	$(document).on('scroll', function (e) {
+		$('.navbar').css('opacity', ($(document).scrollTop() / 500));
+	});
 });

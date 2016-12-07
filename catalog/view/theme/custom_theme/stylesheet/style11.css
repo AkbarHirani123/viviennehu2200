@@ -396,7 +396,6 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	width: 300px
 	box-shadow: 0 6px 12px rgba(0,0,0,.175);*/
 	/*left: 90px;*/
-	white-space: nowrap;
 }
 
 .sort-options {
@@ -422,8 +421,4 @@ now override the 3.3 new styles for modern browsers & apply opacity
 .product-info h1, h2 {
 	font-size: 20px;
 	padding-bottom: 10px;
-}
-
-#search input {
-	display: none;
 }

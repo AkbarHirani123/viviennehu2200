@@ -16,10 +16,10 @@
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       
       <div class="row">
-        <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12">
           <h2><?php echo $heading_title; ?></h2>
         </div>
-        <div class="col-md-3 col-sm-6 col-xs-6 text-right">
+        <div class="col-md-1 col-md-offset-2 col-sm-3 col-xs-6 text-right">
           <div class="dropdown">
             <p class="sort dropdown-toggle">Sort By</p>
             <ul class="dropdown-menu sort-content">
@@ -29,7 +29,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6 col-xs-6 text-right">
+        <div class="col-md-1 col-md-offset-2 col-sm-3 col-xs-6 text-right">
           <div class="dropdown">
             <p class="sort dropdown-toggle">View</p>
             <ul class="dropdown-menu sort-content">
