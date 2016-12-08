@@ -16,7 +16,7 @@
           <?php if ($images) { ?>
             <ul class="image-additional">
               <?php foreach ($images as $image) { ?>
-              <li><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></li>
+              <li><img src="<?php echo $image['thumb']; ?>" style="width:100px; height:auto;" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></li>
               <?php } ?>
             </ul> 
           <?php } ?>
@@ -24,7 +24,7 @@
         <div class="col-sm-6">
           <div class="quick-view-container">
           <?php if ($thumb) { ?>
-          <img class="quick-view-main" src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
+          <img class="quick-view-main" style="width:400px; height:auto;" src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
           <?php } ?>
           </div>
         </div>
@@ -40,6 +40,7 @@
             <?php if (!$special) { ?>
             <li>
               <h2><?php echo $price; ?></h2>
+              <strong><?php echo $text_model; ?></strong> <?php echo $model; ?>
             </li>
             <?php } else { ?>
             <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>

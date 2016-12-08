@@ -72,7 +72,12 @@ $(document).ready(function() {
 		$(this).prev().delay(400).fadeIn(600);
 	});
 
-	$(document).on('scroll', function (e) {
-		$('.navbar').css('opacity', ($(document).scrollTop() / 500));
-	});
+});
+
+$(window).on('scroll', function (e) {
+	$('.navbar').css('opacity', (.4) );
+	$('.navbar:hover').css('opacity', (1) );
+	if($(window).scrollTop() == 0){
+        $('.navbar').css('opacity', (1) );
+    }
 });

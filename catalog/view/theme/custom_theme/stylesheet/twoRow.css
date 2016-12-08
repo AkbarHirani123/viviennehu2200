@@ -1,69 +1,46 @@
 /* v3.0 One Row Navigation Final */
+/* White navbar */
 
-.navbar-inverse a {
-	color: white;
+.navbar a {
+	color: #555;
 	letter-spacing: 1.5px;
 }
 
-.navbar-inverse .dropdown li a {
+.navbar:hover, .navbar:focus {
+	opacity: 1;
+}
+
+.dropdown li a {
 	color: #555;
 }
 
-.dropdown-menu li > a:hover,
-.dropdown-menu li:hover {
+.dropdown-menu li > a:hover {
     text-decoration: none;
      color: #222; 
      background-color: #ddd; 
      background-image: none; 
 }
 
-.navbar-inverse {
+.navbar {
 	text-align: center;
 	position: fixed;
 	z-index: 10;
+	width:100%;
 	margin-top: -110px;
-	width: 100%;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+	opacity: 1;
+	transition: all 1s;
 }
 
-.navbar-inverse .navbar-collapse {
-	padding-top: 45px;
+.navbar .navbar-collapse {
+	padding-bottom: 10px;
+	width: 50%;
     margin: auto;
 }
 
-.lower-nav + div {
+.navbar + div {
 	margin-top: 110px;
-}
-
-.lower-nav {
-	width: 10%;
-	float: right;
-	margin-top: 15px;
-}
-
-.lower-nav li {
-	display: inline;
-	float: left;
-	width: 25%;
-	/*transition: all 3s ease;*/
-}
-
-.lower-nav li a {
-	color: #555;
-}
-
-.lower-nav .dropdown li {
-	float: none;
-}
-
-.fa {
-	font-size: 20px;
-}
-
-#search input {
-	position: absolute;
-	right: 40px;
-	width: 300px;
-	border: 1px solid #555;
 }
 
 /* Media Query for mobile 300px screen to 748px */
@@ -73,16 +50,14 @@
 		margin-top: 100px;
 	}*/
 
-	.navbar-inverse {
+	.navbar.navbar-inverse {
 		height: 100px;
 		transition: all .75s ease;
 	}
 
-	.navbar.navbar-inverse.dropdown-menu {
+	.dropdown-menu {
 		border-radius: 0px;
 		border: none;
-		padding: 10px 15px;
-		top: 0px;
 	}
 
 	.nav-justified {
@@ -197,9 +172,10 @@
 	}
 
 	/* Fix dropdown menu */
-	.dropdown:hover .dropdown-menu, .dropdown-toggle, .dropdown, .dropdown-inner {
+	.dropdown:hover .dropdown-menu, .dropdown-toggle, .dropdown {
 		display: block;
 		margin: auto;
+		z-index: 10000;
 	}
 
 	/* Set a tags on navigation */
@@ -241,8 +217,11 @@
 
 	/* Logo size in the Navigation */
 	.logo {
-		width: 15%;
+		width: 35%;
     	height: auto;
+		margin-top: 15px;
+		display: inline-block;
+
 	}
 
 	.logo-name {
@@ -354,5 +333,3 @@
 }*/
 
 /* End of one row nav */
-
-
