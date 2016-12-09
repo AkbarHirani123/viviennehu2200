@@ -1,3 +1,10 @@
 config.php
 admin/config.php
 image
+system/config
+system/engine
+system/helper
+system/storage
+system/modification.xml
+system/startup.php
+system/framework.php
