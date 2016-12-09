@@ -76,8 +76,19 @@ $(document).ready(function() {
 
 $(window).on('scroll', function (e) {
 	$('.navbar').css('opacity', (.4) );
-	$('.navbar:hover').css('opacity', (1) );
+
+	$(".navbar").hover(function() {
+		$(this).css('opacity', (1));
+	});
+
 	if($(window).scrollTop() == 0){
         $('.navbar').css('opacity', (1) );
     }
 });
+
+$(window).load(function(){
+	if( $('#no-top-margin').hasClass('no-top-margin') ){
+		$('.navbar').css('margin-top','-50px');
+	}
+});
+

@@ -8,3 +8,4 @@ system/storage
 system/modification.xml
 system/startup.php
 system/framework.php
+.htaccess

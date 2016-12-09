@@ -20,3 +20,19 @@
 	-webkit-filter: drop-shadow(30px 30px 7px #222);
 	filter: drop-shadow(30px 30px 7px #222);
 }
+
+#no-top-margin {
+	margin-top: 50px;
+}
+
+.owl-wrapper-outer{
+	border: none !important;
+	border-radius: 0px !important;
+	-webkit-border-radius: none !important;
+	moz-border-radius: none !important;
+    -o-border-radius: none !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	moz-box-shadow: none !important;
+    -o-box-shadow: none !important;
+}

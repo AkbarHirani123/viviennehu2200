@@ -96,10 +96,10 @@
             <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
               <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
             </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse col-md-offset-2">
+            <div class="collapse navbar-collapse navbar-ex1-collapse col-md-offset-1">
               <ul class="nav navbar-nav col-md-12">
                 <div class="row">
-                <?php $class = 12 / sizeof($categories) ?>
+                <?php $class = 12 / sizeof($categories);?>
                 <?php foreach ($categories as $category) { ?>
                 <?php if ($category['children']) { ?>
                 <li class="dropdown col-md-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo strtoupper($category['name']); ?></a>
