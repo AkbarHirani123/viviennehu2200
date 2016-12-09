@@ -133,13 +133,13 @@ class Image {
     
 	    public function cropsize($width = 0, $height = 0) {
 	    
-	    	if (!$this->info['width'] || !$this->info['height']) {
+	    	if (!$this->width || !$this->height) {
 	    		return;
 	    	}
         
 	        //afmetingen bepalen
-	        $photo_width = $this->info['width']; 
-	        $photo_height = $this->info['height'];
+	        $photo_width = $this->width; 
+	        $photo_height = $this->height;
 	        
 	        $new_width = $width;
 	        $new_height = $height;
@@ -178,7 +178,7 @@ class Image {
 	       	$image_old = $this->image;
 	        $this->image = imagecreatetruecolor($width, $height);
 			
-			if (isset($this->info['mime']) && $this->info['mime'] == 'image/png') {		
+			if ($this->mime == 'image/png') {		
 				imagealphablending($this->image, false);
 				imagesavealpha($this->image, true);
 				$background = imagecolorallocatealpha($this->image, 255, 255, 255, 127);
@@ -193,8 +193,8 @@ class Image {
 	        imagecopyresampled($this->image, $image_old, 0, 0, $from_x, $from_y, $new_width, $new_height, $photo_x, $photo_y);
 	        imagedestroy($image_old);
 	           
-	        $this->info['width']  = $width;
-	        $this->info['height'] = $height;
+	        $this->width  = $width;
+	        $this->height = $height;
 
 	    
 	    }
@@ -210,13 +210,13 @@ class Image {
     
 	    public function onesize($maxsize = 0) {
 	    
-	    	if (!$this->info['width'] || !$this->info['height']) {
-	    		return;
-	    	}
+	    	if (!$this->width || !$this->height) {
+				return;
+			}
         
 	        //afmetingen bepalen
-	        $photo_width = $this->info['width']; 
-	        $photo_height = $this->info['height'];
+	        $photo_width = $this->width; 
+	        $photo_height = $this->height;
  	        
 	        
 	        // calculate dimensions
@@ -252,7 +252,7 @@ class Image {
 	       	$image_old = $this->image;
 	        $this->image = imagecreatetruecolor($width, $height);
 			
-			if (isset($this->info['mime']) && $this->info['mime'] == 'image/png') {		
+			if ($this->mime == 'image/png') {		
 				imagealphablending($this->image, false);
 				imagesavealpha($this->image, true);
 				$background = imagecolorallocatealpha($this->image, 255, 255, 255, 127);
@@ -267,8 +267,8 @@ class Image {
 	        imagecopyresampled($this->image, $image_old, 0, 0, 0, 0, $width, $height, $photo_width, $photo_height);
 	        imagedestroy($image_old);
 	           
-	        $this->info['width']  = $width;
-	        $this->info['height'] = $height;
+	        $this->width = $width;
+			$this->height = $height;
 
 	    
 	    }
