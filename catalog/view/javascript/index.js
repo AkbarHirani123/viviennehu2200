@@ -77,10 +77,16 @@ $(document).ready(function() {
 $(window).on('scroll', function (e) {
 	$('.navbar').css('opacity', (.4) );
 
-	$(".navbar").hover(function() {
-		$(this).css('opacity', (1));
-	});
+	$(window).mousemove(function(){
+		$(".navbar").mouseover(function() {
+			$(this).css('opacity', (1));
+		});
 
+		$(".navbar").mouseout(function() {
+			$(this).css('opacity', (.4));
+		});
+	});
+	
 	if($(window).scrollTop() == 0){
         $('.navbar').css('opacity', (1) );
     }
