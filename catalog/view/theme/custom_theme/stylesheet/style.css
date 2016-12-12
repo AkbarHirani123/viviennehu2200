@@ -408,6 +408,11 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	border: none;
 }
 
+.image-additional {
+	height: 75vh;
+	overflow: scroll;
+}
+
 .image-additional a {
 	padding: 0;
 	margin: 10px;
