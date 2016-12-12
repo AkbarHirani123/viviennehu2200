@@ -4,6 +4,10 @@
 	z-index:1000;
 }
 
+.logo {
+	z-index:1001;
+}
+
 /* Media Query for mobile 300px screen to 748px */
 @media (min-width: 330px) {
 
@@ -40,7 +44,7 @@
 	}
 
 	.navbar {
-		text-align: center;
+		text-align: center; 
 	}
 	/* END OF Two Row (second row) navigation */
 }

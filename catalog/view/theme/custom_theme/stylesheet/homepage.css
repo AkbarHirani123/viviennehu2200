@@ -13,14 +13,8 @@
 	margin-right: 0px;
 }
 
-.add-shadow {
-	margin: auto;
-    max-height: 100vh;
-    max-width: auto;
-}
-
 #no-top-margin {
-	margin-top: 50px;
+	margin-top: 0px;
 }
 
 .owl-wrapper-outer{
@@ -33,4 +27,9 @@
 	-webkit-box-shadow: none !important;
 	moz-box-shadow: none !important;
     -o-box-shadow: none !important;
+}
+
+.owl-carousel {
+	position: relative;
+	height: 100vh;
 }

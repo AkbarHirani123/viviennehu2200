@@ -329,11 +329,11 @@ div.pic-modal img{
 }
 
 .img-center {
-    margin: auto;
+/*    margin: auto;
     max-height: 100vh;
     max-width: auto;
 	-webkit-filter: drop-shadow(30px 30px 7px #222);
-	filter: drop-shadow(30px 30px 7px #222);
+	filter: drop-shadow(30px 30px 7px #222);*/
 }
 
 .carousel-fade .carousel-inner .item {
@@ -460,4 +460,6 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	background-color: transparent;
 	color: #444;
 }
-
+.img-center {
+	margin: auto;
+}

@@ -97,7 +97,7 @@ $(window).load(function(){
     var $window = $(window);
 
 	if( $('#no-top-margin').hasClass('no-top-margin') ){
-		$('.navbar').css('margin-top','-50px');
+		$('.navbar').css('margin-top','0px');
 	}
 
 	function checkWidth() {
@@ -107,7 +107,7 @@ $(window).load(function(){
         	$('.navbar').css('margin-top','0px');
         }else {
         	if( $('#no-top-margin').hasClass('no-top-margin') ){
-				$('.navbar').css('margin-top','-50px');
+				$('.navbar').css('margin-top','0px');
 			}
         	$('.row-2').removeClass('fix-top');
         }
