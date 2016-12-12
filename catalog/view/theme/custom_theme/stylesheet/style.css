@@ -411,7 +411,20 @@ now override the 3.3 new styles for modern browsers & apply opacity
 .image-additional {
 	height: 75vh;
 	overflow: scroll;
+	
 }
+/* Scrollbar */ 
+
+::-webkit-scrollbar{width: 3px;}
+
+::-webkit-scrollbar-thumb{background-color:rgb(196, 196, 196); border-radius: 3;}
+::-webkit-scrollbar-thumb:hover{background-color:rgb(196, 196, 196);}
+
+::-webkit-scrollbar-track{background-color:rgb(237, 237, 237);}
+
+
+/* End Scrollbar */
+
 
 .image-additional a {
 	padding: 0;
