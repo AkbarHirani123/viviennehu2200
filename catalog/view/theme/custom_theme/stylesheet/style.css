@@ -288,7 +288,7 @@ div.pic-modal img{
 	border-radius: 0px;
 }
 
-/* Custom Bootstrap button */
+/* Custom buttons */
 .btn.sharp {
   border-radius:0;
 }
@@ -298,24 +298,23 @@ div.pic-modal img{
 	padding: 10px 10px;
 }
 
-.btn-primary.outline {
+
+.btn-primary, #button-cart {
 	border: 2px solid #444;
-	color: #fff;
-	background-color: #444;
+	border-radius: 0px;
+	color: #444;
+	background-color: transparent;
+	background-image: none;
 	transition: all .7s ease;
 }
 
-.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary, 
-#button-cart {
-	color: #444;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .open > .dropdown-toggle.btn-primary, 
+#button-cart:active, #button-cart:hover, #button-cart:focus {
+	color: white;
 	border-color: #444;
 	border-radius: 0px;
-	background-color: #fff;
+	background-color: #444;
 	background-image: none;
-}
-.btn-primary.outline:active, .btn-primary.outline.active, #button-cart:active {
-	border-color: #444;
-	color: #444;
 	box-shadow: none;
 }
 
@@ -413,18 +412,6 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	overflow: scroll;
 	
 }
-/* Scrollbar */ 
-
-::-webkit-scrollbar{width: 3px;}
-
-::-webkit-scrollbar-thumb{background-color:rgb(196, 196, 196); border-radius: 3;}
-::-webkit-scrollbar-thumb:hover{background-color:rgb(196, 196, 196);}
-
-::-webkit-scrollbar-track{background-color:rgb(237, 237, 237);}
-
-
-/* End Scrollbar */
-
 
 .image-additional a {
 	padding: 0;
@@ -437,8 +424,40 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	width: 100px;*/
 }
 
+/* Scrollbar */ 
+
+::-webkit-scrollbar{width: 3px;}
+
+::-webkit-scrollbar-thumb{background-color:rgb(196, 196, 196); border-radius: 3;}
+::-webkit-scrollbar-thumb:hover{background-color:rgb(196, 196, 196);}
+
+::-webkit-scrollbar-track{background-color:rgb(237, 237, 237);}
+
+
+/* End Scrollbar */
+
 .product-info h1, h2 {
 	font-size: 20px;
 	padding-bottom: 10px;
+}
+
+.panel-group {
+	margin-top: 30px;
+}
+
+.panel-title a {
+	text-decoration: none;
+}
+
+.panel-group .panel {
+	border-bottom: 1px solid #444;
+	border-radius: 0px;
+	box-shadow: none;
+}
+
+.panel-group .panel-heading+.panel-collapse .panel-body {
+	border: none;
+	background-color: transparent;
+	color: #444;
 }
 
