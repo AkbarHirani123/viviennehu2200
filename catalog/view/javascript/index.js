@@ -93,8 +93,29 @@ $(window).on('scroll', function (e) {
 });
 
 $(window).load(function(){
+	// Optimalisation: Store the references outside the event handler:
+    var $window = $(window);
+
 	if( $('#no-top-margin').hasClass('no-top-margin') ){
 		$('.navbar').css('margin-top','-50px');
 	}
+
+	function checkWidth() {
+		var windowsize = $window.width();
+        if (windowsize < 768) {
+        	$('.row-2').addClass('fix-top');
+        	$('.navbar').css('margin-top','0px');
+        }else {
+        	if( $('#no-top-margin').hasClass('no-top-margin') ){
+				$('.navbar').css('margin-top','-50px');
+			}
+        	$('.row-2').removeClass('fix-top');
+        }
+	}
+
+	// Execute on load
+    checkWidth();
+    // Bind event listener
+    $(window).resize(checkWidth);
 });
 

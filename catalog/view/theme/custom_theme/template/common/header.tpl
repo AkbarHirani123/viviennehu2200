@@ -90,19 +90,18 @@
         <?php echo $cart; ?>
       </div> -->
     </div>
-    <div class="row">
+    <div class="row row-2">
       <?php if ($categories) { ?>
-        <!-- <div class="container-fluid"> -->
-            <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
+            <div class="navbar-header">
               <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
             </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse col-md-offset-1">
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
               <ul class="nav navbar-nav col-md-12">
                 <div class="row">
                 <?php $class = 12 / sizeof($categories);?>
                 <?php foreach ($categories as $category) { ?>
                 <?php if ($category['children']) { ?>
-                <li class="dropdown col-md-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo strtoupper($category['name']); ?></a>
+                <li class="dropdown col-md-<?php echo $class ?> col-sm-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo strtoupper($category['name']); ?></a>
                     <div class="dropdown-inner">
                       <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
                       <ul class="dropdown-menu">
@@ -114,13 +113,12 @@
                     </div>
                 </li>
                 <?php } else { ?>
-                <li class="col-md-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>"><?php echo strtoupper($category['name']); ?></a></li>
+                <li class="col-md-<?php echo $class ?> col-sm-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>"><?php echo strtoupper($category['name']); ?></a></li>
                 <?php } ?>
                 <?php } ?>
               </div>
               </ul>
             </div>
-        <!-- </div> -->
       <?php } ?>
     </div>
   <!-- </div> -->
