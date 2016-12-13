@@ -56,8 +56,16 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.glyphicon').on('click', function() {
-		
+	$('.panel-title').on('click', function() {
+		var $span = $(this).find('span');
+		if ($span.hasClass('glyphicon-minus')) {
+			$span.removeClass('glyphicon-minus');
+			$span.addClass('glyphicon-plus');
+		}
+		else {
+			$span.removeClass('glyphicon-plus');
+			$span.addClass('glyphicon-minus');
+		}
 	});
 
 

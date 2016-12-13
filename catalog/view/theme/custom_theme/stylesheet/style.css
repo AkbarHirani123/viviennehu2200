@@ -465,11 +465,8 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 .panel-title span {
 	float: right;
-	font-size: 8px;
-	padding-top: 3px;
-}
-
-.plus {
+	font-size: 14px;
+	/*padding-top: 3px;*/
 }
 
 .panel-group .panel {
