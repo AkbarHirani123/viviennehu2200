@@ -17,6 +17,7 @@
 	margin-top: 0px;
 }
 
+/* remove owl borders */
 .owl-wrapper-outer{
 	border: none !important;
 	border-radius: 0px !important;
@@ -29,7 +30,51 @@
     -o-box-shadow: none !important;
 }
 
-.owl-carousel {
-	position: relative;
-	height: 100vh;
+/* carousel fade */
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+/* make banner full screen */
+.banner-class .carousel,.banner-class .item,.banner-class .active{height:100vh;}
+.banner-class .carousel-inner{height:100vh;}
+.fill{width:100%;height:100vh;background-position:center;background-size:cover;}
+
+/* veertical align button for home page */
+.vertical-align-middle {
+	padding: 5px 10px;
+	margin-top: 35vh;
+	line-height:1.5;
+	text-align: center;
+	letter-spacing: 1.2px;
+}
+
+.add-margin-top {
+	margin-top: 20px;
+}
+
+/* hover button for home page */
+.hover-button{ border-bottom: 1px solid #fff; 	transition: all .7s ease;}
+.hover-button:hover {
+	color: #999;
+	border-bottom: 1px solid;
+	transition: all .7s ease;
+
 }

@@ -1,4 +1,12 @@
 $(document).ready(function() {
+
+    var sideslider = $('[data-toggle=collapse-side]');
+    var sel = sideslider.attr('data-target');
+    var sel2 = sideslider.attr('data-target-2');
+    sideslider.click(function(event){
+        $(sel).toggleClass('in');
+        $(sel2).toggleClass('out');
+    });
 	
 	// fixes breadcrumbs to topNav on all pages
 	// $('.breadcrumb').addClass('breadcrumbs');
@@ -89,10 +97,18 @@ $(window).on('scroll', function (e) {
 	$(window).mousemove(function(){
 		$(".navbar").mouseover(function() {
 			$(this).css('opacity', (1));
+			$(this).css('background-color','rgba(255, 255, 255, 1)')
 		});
 
 		$(".navbar").mouseout(function() {
-			$(this).css('opacity', (.4));
+			if($(window).scrollTop() == 0){
+		        $('.navbar').css('opacity', (1) );
+				$(this).css('background-color','transparent');
+		    }
+			else{
+				$(this).css('opacity', (.4));
+				$(this).css('background-color','transparent');
+			}
 		});
 	});
 	

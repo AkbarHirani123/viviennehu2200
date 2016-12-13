@@ -140,6 +140,3 @@
     <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>
-
-
-Notice: Undefined index: image in /Applications/MAMP/htdocs/2200/catalog/view/theme/custom_theme/template/product/category.tpl on line 50
