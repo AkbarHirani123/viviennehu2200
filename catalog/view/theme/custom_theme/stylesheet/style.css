@@ -130,8 +130,16 @@ html, body {
 
 .product-thumb {
 	border: none;
-/*	border-left: 3px solid #555;
-*/	
+	text-align: center;
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+
+.product-thumb a, h4, p {
+	color: #555;
+	font-weight: normal;
+	font-size: 12px;
+	/*display: inline;*/
 }
 
 .product-thumb .button-group {
@@ -403,6 +411,10 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	width: 50px;
 }
 
+.product .col-sm-6, .col-sm-2 {
+	text-align: center;
+}
+
 .thumbnail {
 	border: none;
 }
@@ -443,13 +455,25 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 .panel-group {
 	margin-top: 30px;
+	border-top: 1px solid #444;
 }
 
-.panel-title a {
+.panel-title {
 	text-decoration: none;
+	color: #444;
+}
+
+.panel-title span {
+	float: right;
+	font-size: 8px;
+	padding-top: 3px;
+}
+
+.plus {
 }
 
 .panel-group .panel {
+
 	border-bottom: 1px solid #444;
 	border-radius: 0px;
 	box-shadow: none;

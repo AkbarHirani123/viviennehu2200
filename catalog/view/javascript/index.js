@@ -19,9 +19,9 @@ $(document).ready(function() {
 		$('#' + $modal + '-modal').css('display', 'block');
 	});
 
-	$('span').click(function() {
-		$('.modal').css('display', 'none');
-	});
+	// $('span').click(function() {
+	// 	$('.modal').css('display', 'none');
+	// });
 
 	$('#slider img').click(function() {
 		var $img = $(this).attr('src');
@@ -30,6 +30,11 @@ $(document).ready(function() {
 		$mainView.attr('src', $img);
 		$('#slider img').css('border-bottom', 'none');
 		$(this).css('border-bottom', '3px solid black');
+	});
+
+	$('.image-additional img').click(function() {
+		var $img = $(this).attr('src');
+		$('.quick-view-main').attr('src', $img);
 	});
 
 	// zoom in on images
@@ -49,6 +54,10 @@ $(document).ready(function() {
 		if (event.target.className == 'modal') {
 			$('.modal').css('display', 'none');
 		}
+	});
+
+	$('.glyphicon').on('click', function() {
+		
 	});
 
 
