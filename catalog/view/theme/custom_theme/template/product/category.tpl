@@ -138,5 +138,8 @@
     <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 2f8d7ff6a842e375cb750c6e7a418e57009353d5
