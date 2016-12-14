@@ -44,17 +44,16 @@ class ModelToolImage extends Model {
 	// Function to crop an image with given dimensions. What doesn/t fit will be cut off.
 	function cropsize($filename, $width, $height) {
 	
-		if (!file_exists(DIR_IMAGE . $filename) || !is_file(DIR_IMAGE . $filename)) {
+		if (!is_file(DIR_IMAGE . $filename)) {
 			return;
 		} 
 		
-		$info = pathinfo($filename);
-		$extension = $info['extension'];
+		$extension = pathinfo($filename, PATHINFO_EXTENSION);
 		
 		$old_image = $filename;
 		$new_image = 'cache/' . substr($filename, 0, strrpos($filename, '.')) . '-cr-' . $width . 'x' . $height . '.' . $extension;
 		
-		if (!file_exists(DIR_IMAGE . $new_image) || (filemtime(DIR_IMAGE . $old_image) > filemtime(DIR_IMAGE . $new_image))) {
+		if (!is_file(DIR_IMAGE . $new_image) || (filemtime(DIR_IMAGE . $old_image) > filemtime(DIR_IMAGE . $new_image))) {
 			$path = '';
 			
 			$directories = explode('/', dirname(str_replace('../', '', $new_image)));
