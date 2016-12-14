@@ -88,11 +88,12 @@
         <div class="product-layout product-grid col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product-thumb">
             <div class="image">
-              <a href="<?php echo $product['href']; ?>">
-                <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive frontPic" />
-                <img src="<?php echo $product['images'][1]; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive backPic" />
-              </a>
-              <!-- <a href="<?php echo $product['href']; ?>" class="backPic"><img src="<?php echo $product['images'][1]; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a> -->
+              <div style="position: relative;">
+                <a href="<?php echo $product['href']; ?>">
+                  <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive front-pic" />
+                  <img src="<?php echo $product['images'][1]; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" />
+                </a>
+              </div>
             </div>
             
             <div>
@@ -141,4 +142,7 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+<style type="text/css">
+
+</style>
 <?php echo $footer; ?>

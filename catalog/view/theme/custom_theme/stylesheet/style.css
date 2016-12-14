@@ -19,10 +19,10 @@ html, body {
 .align-horizontal {
 	margin: auto;
 }
-
+/*
 .backPic {
 	display: none;
-}
+}*/
 
 .fancybox-custom .fancybox-skin {
 	box-shadow: 0 0 50px #222;
@@ -478,3 +478,13 @@ now override the 3.3 new styles for modern browsers & apply opacity
 .img-center {
 	margin: auto;
 }
+
+  .front-pic {
+    position: absolute;
+    left: 0;
+    transition: opacity 1s;
+  }
+
+  .front-pic:hover{
+    opacity: 0;
+  }
