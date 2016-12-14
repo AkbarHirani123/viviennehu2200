@@ -87,8 +87,12 @@
         <?php foreach ($products as $product) { ?>
         <div class="product-layout product-grid col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product-thumb">
-            <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>
-              <img src="<?php echo "http://localhost:8081/2200-2/image/" . $product['images'][1]['image']; ?>">
+            <div class="image">
+              <a href="<?php echo $product['href']; ?>">
+                <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive frontPic" />
+                <img src="<?php echo $product['images'][1]; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive backPic" />
+              </a>
+              <!-- <a href="<?php echo $product['href']; ?>" class="backPic"><img src="<?php echo $product['images'][1]; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a> -->
             </div>
             
             <div>
@@ -138,8 +142,3 @@
     <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 2f8d7ff6a842e375cb750c6e7a418e57009353d5

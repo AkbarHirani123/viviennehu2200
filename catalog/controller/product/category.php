@@ -210,7 +210,12 @@ class ControllerProductCategory extends Controller {
 					$rating = false;
 				}
 
+				// makes array of additional images
 				$all_images = $this->model_catalog_product->getProductImages($result['product_id']);
+				for ($i = 1; $i < sizeof($all_images) ; $i++) { 
+					$all_images[$i] = $this->model_tool_image->resize($all_images[$i]['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+				}
+				
 
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],

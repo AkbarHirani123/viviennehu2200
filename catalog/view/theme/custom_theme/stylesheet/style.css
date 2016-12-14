@@ -18,7 +18,7 @@ html, body {
 
 .align-horizontal {
 	margin: auto;
-}	
+}
 
 .backPic {
 	display: none;
@@ -176,12 +176,6 @@ div.pic-modal img{
 	vertical-align: top;
 	width: 270px;
 	height: 405px;
-}
-
-.frontPic, .backPic {
-	position: absolute;
-	top: 0px;
-	left: 0px;
 }
 
 .picInfo {
