@@ -306,7 +306,8 @@ class ControllerProductProduct extends Controller {
 			$results = $this->model_catalog_product->getProductImages($this->request->get['product_id']);
 
 			foreach ($results as $result) {
-				
+				/* Changed Lines here to fix image display For additional images on side of product page. */
+
 				$imagesize = getimagesize(DIR_IMAGE . $product_info['image']);
 
 				$thumb_width = $imagesize[0];
