@@ -178,7 +178,7 @@ class Image {
 	       	$image_old = $this->image;
 	        $this->image = imagecreatetruecolor($width, $height);
 			
-			if ($this->mime == 'image/png') {		
+			if (isset($this->mime) && $this->mime == 'image/png') {		
 				imagealphablending($this->image, false);
 				imagesavealpha($this->image, true);
 				$background = imagecolorallocatealpha($this->image, 255, 255, 255, 127);

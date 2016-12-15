@@ -16,7 +16,7 @@
           <?php if ($images) { ?>
             <ul class="image-additional">
               <?php foreach ($images as $image) { ?>
-              <li><img src="<?php echo $image['thumb']; ?>" style="width:150px; height:auto;" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></li>
+              <li><img src="<?php echo $image['thumb']; ?>" style="width:150px; height:auto;"  title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></li>
               <?php } ?>
             </ul> 
           <?php } ?>

@@ -288,9 +288,23 @@ class ControllerProductProduct extends Controller {
 			}
 
 			if ($product_info['image']) {
-				$data['thumb'] = $this->model_tool_image->cropsize($product_info['image'], $this->config->get($this->config->get('config_theme') . '_image_thumb_width'), $this->config->get($this->config->get('config_theme') . '_image_thumb_height'));
+			   $imagesize = getimagesize(DIR_IMAGE . $product_info['image']);
+
+			   if ($imagesize[0] > $imagesize[1]) {
+			      $percent = $this->config->get($this->config->get('config_theme') . '_image_thumb_width') / $imagesize[0];
+
+			      $thumb_width = $percent * $imagesize[0];
+			      $thumb_height = $percent * $imagesize[1];
+			   } else {
+			      $percent = $this->config->get($this->config->get('config_theme') . '_image_thumb_height') / $imagesize[1];
+
+			      $thumb_width = $percent * $imagesize[0];
+			      $thumb_height = $percent * $imagesize[1];
+			   }
+
+			   $data['thumb'] = $this->model_tool_image->resize($product_info['image'], $thumb_width, $thumb_height);
 			} else {
-				$data['thumb'] = '';
+			   $data['thumb'] = '';
 			}
 
 			$data['images'] = array();
@@ -300,7 +314,7 @@ class ControllerProductProduct extends Controller {
 			foreach ($results as $result) {
 				$data['images'][] = array(
 					'popup' => $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_popup_width'), $this->config->get($this->config->get('config_theme') . '_image_popup_height')),
-					'thumb' => $this->model_tool_image->cropsize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_additional_width'), $this->config->get($this->config->get('config_theme') . '_image_additional_height'))
+					'thumb' => $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_additional_width'), $this->config->get($this->config->get('config_theme') . '_image_additional_height'))
 				);
 			}
 
@@ -408,9 +422,9 @@ class ControllerProductProduct extends Controller {
 
 			foreach ($results as $result) {
 				if ($result['image']) {
-					$image = $this->model_tool_image->cropsize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_related_width'), $this->config->get($this->config->get('config_theme') . '_image_related_height'));
+					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_related_width'), $this->config->get($this->config->get('config_theme') . '_image_related_height'));
 				} else {
-					$image = $this->model_tool_image->cropsize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_related_width'), $this->config->get($this->config->get('config_theme') . '_image_related_height'));
+					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_related_width'), $this->config->get($this->config->get('config_theme') . '_image_related_height'));
 				}
 
 				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
