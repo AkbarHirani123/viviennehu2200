@@ -5415,7 +5415,7 @@
   padding: 15px;
 }
 #d_quickcheckout .panel-heading {
-  padding: 10px 15px;
+  padding: 15px 15px;
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
@@ -5424,7 +5424,7 @@
   color: inherit;
 }
 #d_quickcheckout .panel-title {
-  margin-top: 0;
+  margin-top: -10px;
   margin-bottom: 0;
   font-size: 16px;
   color: inherit;
