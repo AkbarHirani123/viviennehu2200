@@ -2,7 +2,7 @@
 <div class="pic-modal">
 	<div class="modal" id="<?php echo $product['product_id'] . "-modal"; ?>">
   		<div class="modal-content-box">
-  			<span class="close">&times;</span>
+  			<span class="modal-close">X</span>
   			<div class="quick-view-container">
   				<img class="quick-view-main" src="<?php echo $product['thumb']; ?>">
   			</div>

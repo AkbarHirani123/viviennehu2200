@@ -8,7 +8,7 @@ img {
 	border: 0;
 }
 html, body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Pathway Gothic One', sans-serif;
 	display: block;
 	background: rgb(255,255,255);
 	margin: 0 auto;
@@ -174,8 +174,8 @@ div.pic img {
 
 div.pic-modal img{
 	vertical-align: top;
-	width: 270px;
-	height: 405px;
+	width: auto;
+    height: 100vh;
 }
 
 .picInfo {
@@ -222,35 +222,42 @@ div.pic-modal img{
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1;
-	background-color: rgba(0,0,0,0.4);
+	z-index: 11;
+	background-color: rgba(0,0,0,0.9);
 	width: 100%;
 	height: 100%;
 	overflow: auto;
 	display: none;
 }
 
-.modal-content-box {
+/*.modal-content-box {
 	height: 600px;
 	width: 600px;
 	background-color: #fff;
 	margin: 10.5% auto 1% auto;
 	padding: 15px;
 	border: 1px solid #aaa;
-}
+}*/
 
-.modal-content-box img {
+/*.modal-content-box img {
 	height: 281px;
 	width: 500px
+}*/
+
+.modal-close {
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    float: right;
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    opacity: 1;
 }
 
-.close {
-	float: right;
-}
-
-.close:hover {
-	font-weight: bold;
+.modal-close:hover {
 	cursor: pointer;
+	transform: rotate(360deg); 
 }
 
 

@@ -27,8 +27,8 @@ $(document).ready(function() {
 		$('#' + $modal + '-modal').css('display', 'block');
 	});
 
-	$('.close').click(function() {
-		$('.pic-modal').css('display', 'none');
+	$('.modal-close').click(function() {
+		$('.modal').css('display', 'none');
 	});
 
 	$('#slider img').click(function() {
@@ -79,22 +79,6 @@ $(document).ready(function() {
 
 	$('#search-toggle').click(function() {
 		$('#search input').toggle();
-	});
-
-	// show back view when mouse stays on object
-	var config = {
-		over: function() {
-			$(this).fadeOut(400);
-			$(this).next().delay(400).fadeIn(600);
-		},
-		interval: 600,
-		out: function() {}
-	}
-	$('.frontPic').hoverIntent(config);
-
-	$('.backPic').mouseout(function() {
-		$(this).fadeOut(400);
-		$(this).prev().delay(400).fadeIn(600);
 	});
 
 });

@@ -1,11 +1,11 @@
 /* v3.0 One Row Navigation Final */
 
 .nav {
-	z-index:1000;
+	z-index:10;
 }
 
 .logo {
-	z-index:1001;
+	z-index:10;
 }
 
 /* Media Query for mobile 300px screen to 748px */
@@ -77,7 +77,7 @@
 	.dropdown:hover .dropdown-menu, .dropdown-toggle, .dropdown {
 		display: block;
 		margin: auto;
-		z-index: 10000;
+		z-index: 10;
 	}
 
 	/* make responsive image fit to li in navigation */
