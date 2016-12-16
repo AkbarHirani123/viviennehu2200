@@ -27,9 +27,9 @@ $(document).ready(function() {
 		$('#' + $modal + '-modal').css('display', 'block');
 	});
 
-	// $('span').click(function() {
-	// 	$('.modal').css('display', 'none');
-	// });
+	$('.close').click(function() {
+		$('.pic-modal').css('display', 'none');
+	});
 
 	$('#slider img').click(function() {
 		var $img = $(this).attr('src');

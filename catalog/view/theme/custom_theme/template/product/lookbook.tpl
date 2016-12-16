@@ -87,9 +87,11 @@
       
       <br />
       <div class="row">
+        
         <?php foreach ($products as $product) { ?>
         <div class="product-layout product-grid col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product-thumb">
+            <?php include 'modal.tpl' ?>
             <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
             <div>
               <div class="caption">
@@ -118,11 +120,6 @@
                 </p>
                 <?php } ?>
               </div>
-              <!-- <div class="button-group">
-                <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
-                <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
-                <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
-              </div> -->
             </div>
           </div>
         </div>
