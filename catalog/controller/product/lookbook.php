@@ -181,7 +181,12 @@ class ControllerProductLookbook extends Controller {
 
 			foreach ($results as $result) {
 				if ($result['image']) {
-					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+					$imagesize = getimagesize(DIR_IMAGE . $result['image']);
+
+					$thumb_width = $imagesize[0];
+					$thumb_height = $imagesize[1];
+
+					$image = $this->model_tool_image->resize($result['image'], $thumb_width, $thumb_height);
 				} else {
 					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
 				}
