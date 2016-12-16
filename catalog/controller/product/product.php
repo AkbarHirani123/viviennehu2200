@@ -287,10 +287,18 @@ class ControllerProductProduct extends Controller {
 				$data['popup'] = '';
 			}
 
+			/* Changed Lines here to fix image display on product page. */
 			if ($product_info['image']) {
-				$data['thumb'] = $this->model_tool_image->cropsize($product_info['image'], $this->config->get($this->config->get('config_theme') . '_image_thumb_width'), $this->config->get($this->config->get('config_theme') . '_image_thumb_height'));
+
+			    $imagesize = getimagesize(DIR_IMAGE . $product_info['image']);
+
+				$thumb_width = $imagesize[0];
+				$thumb_height = $imagesize[1];
+
+			   $data['thumb'] = $this->model_tool_image->resize($product_info['image'], $thumb_width, $thumb_height);
+
 			} else {
-				$data['thumb'] = '';
+			   $data['thumb'] = '';
 			}
 
 			$data['images'] = array();
@@ -298,9 +306,16 @@ class ControllerProductProduct extends Controller {
 			$results = $this->model_catalog_product->getProductImages($this->request->get['product_id']);
 
 			foreach ($results as $result) {
+				/* Changed Lines here to fix image display For additional images on side of product page. */
+
+				$imagesize = getimagesize(DIR_IMAGE . $product_info['image']);
+
+				$thumb_width = $imagesize[0];
+				$thumb_height = $imagesize[1];
+
 				$data['images'][] = array(
 					'popup' => $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_popup_width'), $this->config->get($this->config->get('config_theme') . '_image_popup_height')),
-					'thumb' => $this->model_tool_image->cropsize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_additional_width'), $this->config->get($this->config->get('config_theme') . '_image_additional_height'))
+					'thumb' => $this->model_tool_image->resize($result['image'], $thumb_width, $thumb_height)
 				);
 			}
 
@@ -408,9 +423,9 @@ class ControllerProductProduct extends Controller {
 
 			foreach ($results as $result) {
 				if ($result['image']) {
-					$image = $this->model_tool_image->cropsize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_related_width'), $this->config->get($this->config->get('config_theme') . '_image_related_height'));
+					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_related_width'), $this->config->get($this->config->get('config_theme') . '_image_related_height'));
 				} else {
-					$image = $this->model_tool_image->cropsize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_related_width'), $this->config->get($this->config->get('config_theme') . '_image_related_height'));
+					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_related_width'), $this->config->get($this->config->get('config_theme') . '_image_related_height'));
 				}
 
 				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {

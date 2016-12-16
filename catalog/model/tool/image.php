@@ -110,10 +110,10 @@ class ModelToolImage extends Model {
 			$image->save(DIR_IMAGE . $new_image);
 		}
 		
-		if (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1'))) {
-			return HTTPS_IMAGE . $new_image;
+		if ($this->request->server['HTTPS']) {
+			return $this->config->get('config_ssl') . 'image/' . $new_image;
 		} else {
-			return HTTP_IMAGE . $new_image;
+			return $this->config->get('config_url') . 'image/' . $new_image;
 		}
 			
 	}	

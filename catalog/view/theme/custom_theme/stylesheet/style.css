@@ -313,9 +313,9 @@ div.pic-modal img{
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .open > .dropdown-toggle.btn-primary, 
 #button-cart:active, #button-cart:hover, #button-cart:focus {
 	color: white;
-	border-color: #444;
+	border-color: #555;
 	border-radius: 0px;
-	background-color: #444;
+	background-color: #555;
 	background-image: none;
 	box-shadow: none;
 }
