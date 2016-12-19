@@ -78,3 +78,20 @@
 	transition: all .7s ease;
 
 }
+
+/* Wrapper for Banner Long */
+.wrapper-outer {
+	height:100vh;
+}
+
+.wrapper{
+	width:100%;
+    height:100vh;
+    background-position:center;
+	background-size:cover;
+}
+
+.minus-padding {
+	margin-left: -15px;
+	margin-right: -15px;
+}

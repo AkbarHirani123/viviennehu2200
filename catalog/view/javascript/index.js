@@ -84,27 +84,29 @@ $(document).ready(function() {
 });
 
 $(window).on('scroll', function (e) {
-	$('.navbar').css('opacity', (.4) );
+	$('.navbar').css('background-color', 'white' );
+	$('.navbar').css('opacity', (.6) );
 
 	$(window).mousemove(function(){
 		$(".navbar").mouseover(function() {
+			$(this).css('background-color','white');
 			$(this).css('opacity', (1));
-			$(this).css('background-color','rgba(255, 255, 255, 1)')
 		});
 
 		$(".navbar").mouseout(function() {
 			if($(window).scrollTop() == 0){
+				$(this).css('background-color','white');
 		        $('.navbar').css('opacity', (1) );
-				$(this).css('background-color','transparent');
 		    }
 			else{
-				$(this).css('opacity', (.4));
-				$(this).css('background-color','transparent');
+				$('.navbar').css('background-color', 'white' );
+				$(this).css('opacity', (.6));
 			}
 		});
 	});
 	
 	if($(window).scrollTop() == 0){
+		$('.navbar').css('background-color','white');
         $('.navbar').css('opacity', (1) );
     }
 });

@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div id="banner<?php echo $module; ?>" class="col-md-3 col-md-offset-3 banner-class carousel slide carousel-fade" >
+    <div id="banner<?php echo $module; ?>" class="col-md-5 col-md-offset-1 banner-class carousel slide carousel-fade" >
       <div class="carousel-inner">
         <div class="item active">
         <?php $count_active = 0; ?>
