@@ -15,6 +15,7 @@
         <div class="col-sm-2">
           <?php if ($images) { ?>
             <ul class="image-additional">
+              <li><img src="<?php echo $thumb; ?>" style="width:150px; height:auto;"  title="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></li>
               <?php foreach ($images as $image) { ?>
               <li><img src="<?php echo $image['thumb']; ?>" style="width:150px; height:auto;"  title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></li>
               <?php } ?>
