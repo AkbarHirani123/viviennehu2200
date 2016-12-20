@@ -120,6 +120,7 @@
 		opacity: 1;
 		transition: all 1s;
 		white-space: nowrap;
+		border-radius: 0px;
 	}
 
 	.navbar .navbar-collapse {
