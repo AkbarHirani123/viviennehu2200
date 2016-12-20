@@ -87,13 +87,22 @@
       
       <br />
       <div class="row">
-        
-        <?php foreach ($products as $product) { ?>
+        <?php $sliderNextPrev = array(); ?>
+        <?php $previous = null; ?>
+        <?php $next = next($products)['product_id']; ?>
+        <?php for ($i = 0; $i < count($products); $i++) { ?> 
+          <?php $product = $products[$i]; ?>
+          <?php $next = $products[$i + 1]['product_id']; ?>
+          <?php $sliderNextPrev[$product['product_id']] = array($previous, $next); ?>
+          <?php $previous = $product['product_id']; ?>
+          <?php echo $product['product_id']; ?>
+          
+
         <div class="product-layout product-grid col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product-thumb">
-            <?php include 'modal.tpl' ?>
             <div class="image">
-              <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a>
+              <?php include 'modal.tpl' ?>
+              <button class="modal-click lookbook-modal-button" id="<?php echo $product['product_id']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></button>
             </div>
             <div>
               <div class="caption">
@@ -142,6 +151,3 @@
     <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>
-
-
-Notice: Undefined index: image in /Applications/MAMP/htdocs/2200/catalog/view/theme/custom_theme/template/product/category.tpl on line 50

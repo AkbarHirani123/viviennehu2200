@@ -172,7 +172,25 @@ div.pic img {
 	height: auto;
 }
 
-div.pic-modal img{
+#lookbookCarousel {
+
+}
+
+.lookbook-info {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+.lookbook-info h3 {
+	color: white;
+}
+
+.lookbook-info a {
+	color: #ccc;
+}
+
+.lookbook-modal img{
 	vertical-align: top;
 	width: auto;
     height: 100vh;
@@ -250,7 +268,7 @@ div.pic-modal img{
     right: 10px;
     float: right;
     color: white;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 400;
     opacity: 1;
 }
@@ -283,6 +301,12 @@ div.pic-modal img{
 	border-bottom: 3px solid #000;
 	/*width: 110px;
 	height: 165px;*/
+}
+
+.lookbook-modal-button {
+	border: none;
+	background: none;
+    padding: 0;
 }
 
 .contact-box p {

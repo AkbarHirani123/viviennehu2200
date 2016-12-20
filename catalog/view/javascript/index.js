@@ -18,9 +18,9 @@ $(document).ready(function() {
 	// $('#content').addClass('col-sm-offset-3');
 
 	// make modal popup work
-	$('.modal-content-box').each(function(index) {
-		$(this).attr('id', 'box' + index);
-	});
+	// $('.modal-content-box').each(function(index) {
+	// 	$(this).attr('id', 'box' + index);
+	// });
 
 	$('.modal-click').click(function() {
 		var $modal = this.id;
