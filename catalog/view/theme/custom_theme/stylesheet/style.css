@@ -98,7 +98,7 @@ html, body {
 	/*margin-top: 125px;*/
 }
 
-#column-left {
+/*#column-left {
 	margin-left: 5px;
 	width: 300px;
 	display: inline-block;
@@ -107,7 +107,7 @@ html, body {
     overflow-y: scroll;
     top:195px;
     bottom: 0;
-}
+}*/
 
 #column-left a {
 	display: block;

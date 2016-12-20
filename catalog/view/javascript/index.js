@@ -109,6 +109,8 @@ $(window).on('scroll', function (e) {
 		$('.navbar').css('background-color','white');
         $('.navbar').css('opacity', (1) );
     }
+
+    
 });
 
 $(window).load(function(){
