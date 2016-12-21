@@ -388,7 +388,7 @@ footer h5 {
 }
 /* breadcrumb */
 .breadcrumb {
-	margin: 0 0 20px 0;
+	margin: 0 0 15px 0;
 	padding: 8px 0;
 	border: 1px solid #ddd;
 }
@@ -602,14 +602,15 @@ footer h5 {
 }
 .product-thumb .caption {
 	padding: 10px 20px;
-	min-height: 80px;
+	min-height: 60px;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .product-list .product-thumb .caption {
 	margin-left: 230px;
 }
 @media (max-width: 1200px) {
 .product-grid .product-thumb .caption {
-	min-height: 210px;
 	padding: 0 10px;
 }
 }

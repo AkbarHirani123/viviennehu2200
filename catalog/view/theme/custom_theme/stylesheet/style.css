@@ -1,6 +1,7 @@
 /** { opacity: inherit; filter: inherit; } */
 
 
+
 html {
 	background: #ccc;
 }
@@ -9,12 +10,17 @@ img {
 }
 html, body {
 	font-family: 'Pathway Gothic One', sans-serif;
-	display: block;
 	background: rgb(255,255,255);
 	margin: 0 auto;
 	min-height: 100%;
 	color: #555;
 }	
+h1, h2, h3, h4, h5, a {
+	font-family: 'Pathway Gothic One', sans-serif !important;
+	margin: 0 auto;
+	min-height: 100%;
+	color: #555;
+}
 
 .align-horizontal {
 	margin: auto;
@@ -45,6 +51,8 @@ html, body {
 .breadcrumb a {
 	text-decoration: none;
 	color: #555;
+	letter-spacing: .9px;
+	font-size: 11px;
 }
 
 .breadcrumb {
@@ -57,17 +65,17 @@ html, body {
 	display: inline;
 }
 
-.breadcrumb li:hover {
+.breadcrumb li:hover, .breadcrumb li:focus, .breadcrumb li:active {
 	background-color: rgba(221, 221, 221, .7);
 	padding-bottom: 1px;
-	border-bottom: 2px solid #555;
+	border-bottom: 1px solid #555;
 }
 
 .breadcrumb > a::after {
 	top: 1px;
     right: -7px;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 	border-right: 2px solid #555;
 	border-bottom: 2px solid #555;
 }
@@ -467,6 +475,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 .sort {
 	display: inline;
+	white-space: nowrap;
 }
 
 .sort.dropdown-toggle::after {
@@ -525,7 +534,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 ::-webkit-scrollbar{width: 3px;}
 
-::-webkit-scrollbar-thumb{background-color:rgb(196, 196, 196); border-radius: 3;}
+::-webkit-scrollbar-thumb{background-color:rgb(196, 196, 196); border-radius: 2px;}
 ::-webkit-scrollbar-thumb:hover{background-color:rgb(196, 196, 196);}
 
 ::-webkit-scrollbar-track{background-color:rgb(237, 237, 237);}
@@ -534,8 +543,13 @@ now override the 3.3 new styles for modern browsers & apply opacity
 /* End Scrollbar */
 
 .product-info h1, h2 {
-	font-size: 20px;
-	padding-bottom: 10px;
+	font-size: 16px;
+	letter-spacing: .7px;
+}
+
+h3 {
+	font-size: 14px;
+	letter-spacing: .7px;
 }
 
 .panel-group {
@@ -567,12 +581,23 @@ now override the 3.3 new styles for modern browsers & apply opacity
 	margin: auto;
 }
 
-  .front-pic {
-    position: absolute;
-    left: 0;
-    transition: opacity 1s;
-  }
+.front-pic {
+	position: absolute;
+	left: 0;
+	transition: opacity 1s;
+}
 
-  .front-pic:hover{
-    opacity: 0;
-  }
+.front-pic:hover{
+	opacity: 0;
+}
+
+.product-layout.product-grid.col-lg-3,
+.product-layout.product-grid.col-md-3,
+.product-layout.product-grid.col-sm-4 {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#pos-rel {
+	position: relative !important;
+}

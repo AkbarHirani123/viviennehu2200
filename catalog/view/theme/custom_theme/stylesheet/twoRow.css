@@ -112,6 +112,7 @@
 
 	.dropdown li a {
 		color: #555;
+		font-size: 13px;
 	}
 
 	.dropdown-menu li > a:hover {
@@ -136,7 +137,6 @@
 	}
 
 	.navbar .navbar-collapse {
-		padding-bottom: 10px;
 		width: 100%;
 	    margin: auto;
 	}
@@ -160,7 +160,6 @@
 @media (min-width: 992px) {
 
 	.navbar .navbar-collapse {
-		padding-bottom: 10px;
 		width: 60%;
 	    margin: auto;
 	}

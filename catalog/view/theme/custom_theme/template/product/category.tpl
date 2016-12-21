@@ -40,16 +40,10 @@
           </div>
         </div>
       </div>
-      <?php if ($thumb || $description) { ?>
-      <div class="row">
-        <?php if ($thumb) { ?>
-        <div class="col-sm-2"></div>
-        <?php } ?>
-      </div>
       <hr>
-      <?php } ?>
       <?php if ($categories) { ?>
-      <h3><?php echo $text_refine; ?></h3>
+      <h3><?php echo $heading_title; ?> Categories: </h3>
+      <br/>
       <?php if (count($categories) <= 5) { ?>
       <div class="row">
         <div class="col-sm-3">
@@ -66,13 +60,14 @@
       <?php } else { ?>
       <div class="row">
         <?php foreach (array_chunk($categories, ceil(count($categories) / 4)) as $categories) { ?>
-        <div class="col-sm-3">
+        <div class="col-sm-3 col-md-3">
           <ul>
             <?php foreach ($categories as $category) { ?>
-              <?php if ($category['image']) { echo $category['image']; ?>
+              <!-- <?php if ($category['image']) { ?>
+              <?php echo $category['image']; ?>
                 <img src="<?php echo $category['image']; ?>" alt="<?php echo $heading_title; ?>" title="<?php echo $heading_title; ?>" class="img-thumbnail" />
-              <?php } ?>
-            <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+              <?php } ?> -->
+            <li style="padding-bottom: 10px;"><h3><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></h3></li>
             <?php } ?>
           </ul>
         </div>
@@ -82,13 +77,12 @@
       <?php } ?>
       <?php if ($products) { ?>
       
-      <br />
       <div class="row">
         <?php foreach ($products as $product) { ?>
         <div class="product-layout product-grid col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product-thumb">
             <div class="image">
-              <div style="position: relative;">
+              <div id="pos-rel">
                 <a href="<?php echo $product['href']; ?>">
                   <img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive front-pic" />
                   <img src="<?php echo $product['images'][1]; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" />
@@ -98,7 +92,12 @@
             
             <div>
               <div class="caption">
-                <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
+                <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?>
+                <?php if($product['model']) { ?>
+                <?php echo $product['model']; ?>
+                <?php } ?>
+                </a></h4>
+
                 <?php if ($product['rating']) { ?>
                 <div class="rating">
                   <?php for ($i = 1; $i <= 5; $i++) { ?>

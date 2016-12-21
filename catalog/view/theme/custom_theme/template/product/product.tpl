@@ -36,12 +36,12 @@
         <?php } ?>
         <div class="col-sm-3 product-info">
           <h1><?php echo $heading_title; ?></h1>
+          <h1> Model: <?php echo $model; ?></h1>
           <?php if ($price) { ?>
           <ul class="list-unstyled">
             <?php if (!$special) { ?>
             <li>
               <h2><?php echo $price; ?></h2>
-              <strong><?php echo $text_model; ?></strong> <?php echo $model; ?>
             </li>
             <?php } else { ?>
             <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
