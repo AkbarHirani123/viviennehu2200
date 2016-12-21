@@ -601,3 +601,9 @@ h3 {
 #pos-rel {
 	position: relative !important;
 }
+
+.carousel-control.left, .carousel-control.right {
+	background-color: transparent;
+	background-image: none;
+	color: #555;
+}

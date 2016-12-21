@@ -12,7 +12,7 @@
         <?php } else { ?>
         <?php $class = 'col-sm-8'; ?>
         <?php } ?>
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-md-2 hidden-xs">
           <?php if ($images) { ?>
             <ul class="image-additional">
               <li><img src="<?php echo $thumb; ?>" style="width:150px; height:auto;"  title="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></li>
@@ -22,11 +22,31 @@
             </ul> 
           <?php } ?>
         </div>
-        <div class="col-sm-6">
-          <div class="quick-view-container">
-            <?php if ($thumb) { ?>
-            <img class="quick-view-main" style="width:400px; height:auto;" src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
-            <?php } ?>
+        <div class="col-sm-6 col-md-6">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <?php if ($thumb) { ?>
+              <div class="carousel-inner" role="listbox">
+                <div class="item active quick-view-container">
+                  <img class="quick-view-main" style="width:100%; height:auto;" src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
+                </div>
+              <?php } ?>
+              <?php if ($images) { ?>
+                <?php foreach ($images as $image) { ?>
+                <div class="item quick-view-container">
+                  <img class="quick-view-main" style="width:100%; height:auto;" src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
+                </div>
+                <?php } ?>
+              <?php } ?>
+                </div> <!-- End of carousel-inner -->
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
         </div>
         <?php if ($column_left || $column_right) { ?>
@@ -34,7 +54,7 @@
         <?php } else { ?>
         <?php $class = 'col-sm-4'; ?>
         <?php } ?>
-        <div class="col-sm-3 product-info">
+        <div class="col-sm-3 col-md-3 product-info">
           <h1><?php echo $heading_title; ?></h1>
           <h1> Model: <?php echo $model; ?></h1>
           <?php if ($price) { ?>
