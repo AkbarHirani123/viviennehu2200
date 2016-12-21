@@ -1,13 +1,11 @@
 <?php echo $header; ?>
-<div class="container">
+<div class="container lookbook">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
   </ul>
 
-
-  <h1>LOOKBOOK</h1>
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
@@ -92,45 +90,22 @@
         <?php $next = next($products)['product_id']; ?>
         <?php for ($i = 0; $i < count($products); $i++) { ?> 
           <?php $product = $products[$i]; ?>
-          <?php $next = $products[$i + 1]['product_id']; ?>
+          <?php if ($i < (count($products) - 1)) { ?>
+            <?php $next = $products[$i + 1]['product_id']; ?>
+          <?php } ?>
           <?php $sliderNextPrev[$product['product_id']] = array($previous, $next); ?>
           <?php $previous = $product['product_id']; ?>
-          <?php echo $product['product_id']; ?>
-          
 
         <div class="product-layout product-grid col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product-thumb">
             <div class="image">
               <?php include 'modal.tpl' ?>
               <button class="modal-click lookbook-modal-button" id="<?php echo $product['product_id']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></button>
+              <div class="corner">
+                <p><?php echo sprintf("%02d", $i + 1); ?></p>
+              </div>
             </div>
             <div>
-              <div class="caption">
-                <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
-                <?php if ($product['rating']) { ?>
-                <div class="rating">
-                  <?php for ($i = 1; $i <= 5; $i++) { ?>
-                  <?php if ($product['rating'] < $i) { ?>
-                  <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                  <?php } else { ?>
-                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
-                  <?php } ?>
-                  <?php } ?>
-                </div>
-                <?php } ?>
-                <?php if ($product['price']) { ?>
-                <p class="price">
-                  <?php if (!$product['special']) { ?>
-                  <?php echo $product['price']; ?>
-                  <?php } else { ?>
-                  <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
-                  <?php } ?>
-                  <?php if ($product['tax']) { ?>
-                  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-                  <?php } ?>
-                </p>
-                <?php } ?>
-              </div>
             </div>
           </div>
         </div>

@@ -27,6 +27,21 @@ $(document).ready(function() {
 		$('#' + $modal + '-modal').css('display', 'block');
 	});
 
+	$('.modal-cycle').click(function() {
+		var $prev = $(this).closest('.modal').attr('id');
+		var $modal = this.id;
+		$('#' + $modal + '-modal').css('display', 'block');
+		$('#' + $prev).css('display', 'none');
+	});
+
+	$('.lookbook-modal-button').hover(function() {
+		$(this).next().css('display', 'block');
+		console.log($(this).attr('id') + "on");
+	}, function() {
+		$(this).next().css('display', 'none');
+		console.log($(this).attr('id') + "off");
+	});
+
 	$('.modal-close').click(function() {
 		$('.modal').css('display', 'none');
 	});
