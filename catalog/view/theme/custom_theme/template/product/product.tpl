@@ -91,7 +91,14 @@
             <?php if ($reward) { ?>
             <li><?php echo $text_reward; ?> <?php echo $reward; ?></li>
             <?php } ?>
-            <li><?php echo $text_stock; ?> <?php echo $stock; ?></li>
+            <li><?php echo $text_stock; ?> <?php if($stock==='Not In Stock') { ?>
+            <span class="text-danger">
+              <?php echo $stock; ?>
+            </span>
+            <?php } else { ?>
+            <?php echo $stock; ?>
+            <?php } ?>
+            </li>
           </ul>
           <?php } ?>
           <div id="product">
@@ -105,7 +112,11 @@
               <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control">
                 <option value=""><?php echo $text_select; ?></option>
                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                  <?php if($option_value['enabled']) { ?>
+                  <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                  <?php } else { ?>
+                  <option value="<?php echo $option_value['product_option_value_id']; ?>" disabled><?php echo $option_value['name']; ?>
+                  <?php } ?>
                 <?php if ($option_value['price']) { ?>
                 (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
                 <?php } ?>

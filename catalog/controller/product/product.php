@@ -276,7 +276,7 @@ class ControllerProductProduct extends Controller {
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
 
 			if ($product_info['quantity'] <= 0) {
-				$data['stock'] = $product_info['stock_status'];
+				$data['stock'] = $this->language->get('text_notinstock');
 			} elseif ($this->config->get('config_stock_display')) {
 				$data['stock'] = $product_info['quantity'];
 			} else {
@@ -358,17 +358,24 @@ class ControllerProductProduct extends Controller {
 				$product_option_value_data = array();
 
 				foreach ($option['product_option_value'] as $option_value) {
-					if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
+					if (!$option_value['subtract'] || ($option_value['quantity'] >= 0)) {
 						if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
 							$price = $this->currency->format($this->tax->calculate($option_value['price'], $product_info['tax_class_id'], $this->config->get('config_tax') ? 'P' : false), $this->session->data['currency']);
 						} else {
 							$price = false;
 						}
 
+						if($option_value['quantity'] == 0) {
+							$option_value_enabled = false;
+						}else {
+							$option_value_enabled = true;
+						}
+
 						$product_option_value_data[] = array(
 							'product_option_value_id' => $option_value['product_option_value_id'],
 							'option_value_id'         => $option_value['option_value_id'],
 							'name'                    => $option_value['name'],
+							'enabled'				  => $option_value_enabled,
 							'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
 							'price'                   => $price,
 							'price_prefix'            => $option_value['price_prefix']
