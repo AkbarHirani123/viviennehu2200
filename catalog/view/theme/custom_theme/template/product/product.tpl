@@ -27,13 +27,13 @@
               <?php if ($thumb) { ?>
               <div class="carousel-inner" role="listbox">
                 <div class="item active quick-view-container">
-                  <img class="quick-view-main" style="width:100%; height:auto;" src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
+                  <img class="quick-view-main" style="margin:auto; width:auto; height:80vh;" src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
                 </div>
               <?php } ?>
               <?php if ($images) { ?>
                 <?php foreach ($images as $image) { ?>
                 <div class="item quick-view-container">
-                  <img class="quick-view-main" style="width:100%; height:auto;" src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
+                  <img class="quick-view-main" style="margin:auto; width:auto; height:80vh;" src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
                 </div>
                 <?php } ?>
               <?php } ?>
@@ -91,7 +91,8 @@
             <?php if ($reward) { ?>
             <li><?php echo $text_reward; ?> <?php echo $reward; ?></li>
             <?php } ?>
-            <li><?php echo $text_stock; ?> <?php if($stock==='Not In Stock') { ?>
+            <li><?php echo $text_stock; ?> 
+            <?php if($stock==='Not In Stock') { ?>
             <span class="text-danger">
               <?php echo $stock; ?>
             </span>
@@ -251,7 +252,11 @@
               <input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <br />
+              <?php if($stock==='Not In Stock') { ?>
+              <button type="button" data-loading-text="<?php echo $text_loading; ?>" class="btn disabled btn-lg btn-block">Not In Stock</button>
+              <?php } else { ?>
               <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
+              <?php } ?>
             </div>
             <?php if ($minimum > 1) { ?>
             <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>

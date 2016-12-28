@@ -275,13 +275,15 @@ class ControllerProductProduct extends Controller {
 			$data['points'] = $product_info['points'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
 
+			/* It only checks the quantity here. Needs to check each individual quantity.
+
 			if ($product_info['quantity'] <= 0) {
 				$data['stock'] = $this->language->get('text_notinstock');
 			} elseif ($this->config->get('config_stock_display')) {
 				$data['stock'] = $product_info['quantity'];
 			} else {
 				$data['stock'] = $this->language->get('text_instock');
-			}
+			}*/
 
 			$this->load->model('tool/image');
 
@@ -354,6 +356,8 @@ class ControllerProductProduct extends Controller {
 
 			$data['options'] = array();
 
+			$stock_is_disabled = true;
+
 			foreach ($this->model_catalog_product->getProductOptions($this->request->get['product_id']) as $option) {
 				$product_option_value_data = array();
 
@@ -383,6 +387,12 @@ class ControllerProductProduct extends Controller {
 					}
 				}
 
+				foreach($option['product_option_value'] as $option_value) {
+					if($option_value['quantity'] > 0) {
+						$stock_is_disabled = false;
+					}
+				}
+
 				$data['options'][] = array(
 					'product_option_id'    => $option['product_option_id'],
 					'product_option_value' => $product_option_value_data,
@@ -392,6 +402,14 @@ class ControllerProductProduct extends Controller {
 					'value'                => $option['value'],
 					'required'             => $option['required']
 				);
+			}
+
+			if ($product_info['quantity'] <= 0 || $stock_is_disabled) {
+				$data['stock'] = $this->language->get('text_notinstock');
+			} elseif ($this->config->get('config_stock_display')) {
+				$data['stock'] = $product_info['quantity'];
+			} else {
+				$data['stock'] = $this->language->get('text_instock');
 			}
 
 			if ($product_info['minimum']) {
