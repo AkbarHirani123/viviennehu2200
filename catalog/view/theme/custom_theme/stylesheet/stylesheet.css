@@ -192,10 +192,10 @@ div.required .control-label:before {
 	padding: 10px 35px;
 	text-shadow: 0 1px 0 #FFF;
 }
-/* cart */
+/* cart 
 #cart {
 	margin-bottom: 10px;
-}
+}*/
 #cart > .btn {
 	font-size: 12px;
 	line-height: 18px;
@@ -213,7 +213,8 @@ div.required .control-label:before {
 	color: #444;
 }
 #cart .dropdown-menu {
-	background: #eee;
+	border-radius: 1px;
+	background: #fff;
 	z-index: 1001;
 }
 #cart .dropdown-menu {

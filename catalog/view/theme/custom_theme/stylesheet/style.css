@@ -607,3 +607,11 @@ h3 {
 	background-image: none;
 	color: #555;
 }
+
+#cart .btn-danger.btn-xs {
+	padding: 2px 7px;
+}
+
+#cart_li {
+	cursor: pointer;
+}

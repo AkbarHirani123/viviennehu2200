@@ -139,6 +139,16 @@ $(window).load(function(){
 	function checkWidth() {
 		var windowsize = $window.width();
         if (windowsize < 768) {
+        	// Add slideDown animation to dropdown
+			$('.dropdown').on('show.bs.dropdown', function(e){
+			  $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
+			});
+
+			// Add slideUp animation to dropdown
+			$('.dropdown').on('hide.bs.dropdown', function(e){
+			  $(this).find('.dropdown-menu').first().stop(true, true).slideUp(300);
+			});
+        	
         	$('.row-2').addClass('fix-top');
         	$('.navbar').css('margin-top','0px');
         }else {
