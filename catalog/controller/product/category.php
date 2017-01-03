@@ -178,7 +178,7 @@ class ControllerProductCategory extends Controller {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 			
-			if ($category_info['category_id'] == 85) {
+			if ($category_info['category_id'] >= 83 || $category_info['category_id'] == 74) {
 				$results = $this->model_catalog_product->getAllProducts($filter_data); 
 			} else {
 				$results = $this->model_catalog_product->getProducts($filter_data);
@@ -186,7 +186,7 @@ class ControllerProductCategory extends Controller {
 
 			foreach ($results as $result) {
 				if ($result['image']) {
-					if ($category_info['category_id'] == 85) {
+					if ($category_info['category_id'] >= 83 || $category_info['category_id'] == 74) {
 						$imagesize = getimagesize(DIR_IMAGE . $result['image']);
 
 						$thumb_width = $imagesize[0];
@@ -400,7 +400,7 @@ class ControllerProductCategory extends Controller {
 			// $this->response->setOutput($this->load->view('product/category', $data));
 
 			$config_theme = $this->config->get('config_theme') == 'theme_default' ? 'default' : $this->config->get('config_theme');
-			if ($category_info['category_id'] == 85) {
+			if ($category_info['category_id'] >= 83 || $category_info['category_id'] == 74) {
     			$view = 'product/lookbook';
 			} else {
 			    $view = 'product/category';
