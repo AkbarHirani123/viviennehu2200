@@ -11,7 +11,7 @@
         <?php $class = 'col-sm-6'; ?>
         <?php } else { ?>
         <?php $class = 'col-sm-8'; ?>
-        <?php } ?>
+        <?php } ?><!-- 
         <div class="col-sm-2 col-md-2 hidden-xs">
           <?php if ($images) { ?>
             <ul class="image-additional">
@@ -21,11 +21,31 @@
               <?php } ?>
             </ul> 
           <?php } ?>
-        </div>
-        <div class="col-sm-6 col-md-6">
-          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        </div> -->
+        <div class="col-sm-8 col-md-8">
+          <div id="myCarousel" class="carousel slide article-slide" data-ride="carousel">
+            <!-- Indicators -->
+            <?php $count_img = 0; ?>
+            <div class="row">
+              <div class="indicator col-sm-3 col-md-3 hidden-xs">
+                <ol class="carousel-indicators">
+                  <li class="active" data-slide-to="<?php echo $count_img; ?>" data-target="#myCarousel">
+                    <img alt="" style="width:150px; height:auto;" src="<?php echo $thumb; ?>">
+                  </li>
+                  <?php if ($images) { ?>
+                  <?php foreach ($images as $image) { ?>
+                    <?php $count_img = $count_img + 1; ?>
+                    <li class="" data-slide-to="<?php echo $count_img; ?>" data-target="#myCarousel">
+                      <img alt="" style="width:150px; height:auto;" src="<?php echo $image['thumb']; ?>">
+                    </li>
+                  <?php } ?>
+                  <?php } ?>
+                </ol>
+              </div>
+
+              <!-- Start of carousel-inner -->
               <?php if ($thumb) { ?>
-              <div class="carousel-inner" role="listbox">
+              <div class="carousel-inner col-sm-9 col-md-9" role="listbox">
                 <div class="item active quick-view-container">
                   <img class="quick-view-main" style="margin:auto; width:auto; height:80vh;" src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" />
                 </div>
@@ -37,16 +57,19 @@
                 </div>
                 <?php } ?>
               <?php } ?>
-                </div> <!-- End of carousel-inner -->
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+              </div> 
+              <!-- End of carousel-inner -->
+
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           </div>
         </div>
         <?php if ($column_left || $column_right) { ?>
@@ -57,6 +80,7 @@
         <div class="col-sm-3 col-md-3 product-info">
           <h1><?php echo $heading_title; ?></h1>
           <h1> Model: <?php echo $model; ?></h1>
+          <?php if ($status) { ?>
           <?php if ($price) { ?>
           <ul class="list-unstyled">
             <?php if (!$special) { ?>
@@ -91,14 +115,17 @@
             <?php if ($reward) { ?>
             <li><?php echo $text_reward; ?> <?php echo $reward; ?></li>
             <?php } ?>
-            <li><?php echo $text_stock; ?> 
-            <?php if($stock==='Not In Stock') { ?>
-            <span class="text-danger">
+            <li>
+              <?php echo $text_stock; ?> 
+              <div id="instock">
+              <?php if($stock==='Not In Stock') { ?>
+              <span class="text-danger">
+                <?php echo $stock; ?>
+              </span>
+              <?php } else { ?>
               <?php echo $stock; ?>
-            </span>
-            <?php } else { ?>
-            <?php echo $stock; ?>
-            <?php } ?>
+              <?php } ?>
+              </div>
             </li>
           </ul>
           <?php } ?>
@@ -114,9 +141,9 @@
                 <option value=""><?php echo $text_select; ?></option>
                 <?php foreach ($option['product_option_value'] as $option_value) { ?>
                   <?php if($option_value['enabled']) { ?>
-                  <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                  <option value="<?php echo $option_value['product_option_value_id']; ?> - Available"><?php echo $option_value['name']; ?> - Available
                   <?php } else { ?>
-                  <option value="<?php echo $option_value['product_option_value_id']; ?>" disabled><?php echo $option_value['name']; ?>
+                  <option value="<?php echo $option_value['product_option_value_id']; ?> - Make-to-order" ><?php echo $option_value['name']; ?> - Make-to-order
                   <?php } ?>
                 <?php if ($option_value['price']) { ?>
                 (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
@@ -262,6 +289,11 @@
             <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>
             <?php } ?>
           </div>
+          <? } else { /* end of status */ ?>
+          <br/>
+          <div style="border:1px solid #555;padding: 5px 5px; text-align: center;"><span class="text-danger">Product is unavailable!</span> Contact us at <u><a href="mailto:viviennehu@viviennegu.com?Subject=Product%20<?php echo $model; ?>%20Production" target="_top">viviennehu@viviennehu.com</a></u> to ask if we can produce it.</div>
+          <?php } ?>
+
           <?php if ($review_status) { ?>
           <div class="rating">
             <p>
@@ -652,6 +684,20 @@ $('#button-review').on('click', function() {
 			}
 		}
 	});
+});
+
+$(function (){
+  $('#input-option<?php echo $option['product_option_id']; ?>').change(function(){
+    var val = $(this).val();
+    var term = "- Make-to-order";
+    if(val.indexOf( term )!= -1) {
+      $('#instock').html('<span class="text-danger">This Item will take 1-2 week to make plus additional shipping time for product to arrive.</span>');
+    }else if (val.indexOf( '- Available' )!= -1){
+      $('#instock').html('<span>In-stock</span>');
+    }else {
+      $('#instock').html('<span>In-stock</span>');
+    }
+  });
 });
 
 $(document).ready(function() {

@@ -274,6 +274,7 @@ class ControllerProductProduct extends Controller {
 			$data['reward'] = $product_info['reward'];
 			$data['points'] = $product_info['points'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
+			$data['status'] = $product_info['status'];
 
 			/* It only checks the quantity here. Needs to check each individual quantity.
 

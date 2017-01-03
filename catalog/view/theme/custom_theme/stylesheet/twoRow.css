@@ -80,6 +80,11 @@
 	    opacity: 0;
 	    visibility: hidden;
 	}
+	.navbar-nav .open .dropdown-menu {
+		background-color: #fff;
+		min-width: 160px;
+    	padding: 10px 0px;
+	}
 
 	.dropdown:hover .dropdown-menu {
 	    -webkit-transition: max-height 1s, opacity 0.2s, visibility 0s;
@@ -118,9 +123,9 @@
 
 	.dropdown-menu li > a:hover {
 	    text-decoration: none;
-	     color: #222; 
-	     background-color: #ddd; 
-	     background-image: none; 
+		color: #222; 
+		background-color: #ddd; 
+		background-image: none; 
 	}
 
 	.navbar {
