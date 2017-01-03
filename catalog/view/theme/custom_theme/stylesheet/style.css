@@ -661,3 +661,20 @@ h3 {
     border: 2px solid #428BCA;
     opacity: 0.7;
 }
+
+.scrollwithArrow:after {
+	cursor: pointer;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 90vh;
+	right: 50%;
+	width: 26px;
+	height: 26px;
+	border-left: 2px solid white;
+	border-bottom: 2px solid white;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}

@@ -96,6 +96,14 @@ $(document).ready(function() {
 		$('#search input').toggle();
 	});
 
+	$('.scrollwithArrow').on('click', function() {
+		event.preventDefault();
+
+	    $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }, 800);
+	});
+
 });
 
 $(window).on('scroll', function (e) {
