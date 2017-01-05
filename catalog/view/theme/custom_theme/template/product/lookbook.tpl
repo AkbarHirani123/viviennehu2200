@@ -30,7 +30,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-1 col-md-offset-2 col-sm-3 col-xs-6 text-right">
+        <!-- <div class="col-md-1 col-md-offset-2 col-sm-3 col-xs-6 text-right">
           <div class="dropdown">
             <p class="sort dropdown-toggle">View</p>
             <ul class="dropdown-menu sort-content">
@@ -39,7 +39,7 @@
               <?php } ?>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
       <?php if ($thumb || $description) { ?>
       <div class="row">
@@ -113,7 +113,6 @@
       </div>
       <div class="row">
         <div class="col-sm-6 text-left"><?php echo $pagination; ?></div>
-        <div class="col-sm-6 text-right"><?php echo $results; ?></div>
       </div>
       <?php } ?>
       <?php if (!$categories && !$products) { ?>

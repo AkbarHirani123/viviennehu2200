@@ -14,12 +14,18 @@ html, body {
 	margin: 0 auto;
 	min-height: 100%;
 	color: #555;
+
 }	
 h1, h2, h3, h4, h5, a {
 	font-family: 'Pathway Gothic One', sans-serif !important;
 	margin: 0 auto;
 	min-height: 100%;
 	color: #555;
+	font-size: 16px;
+}
+
+p {
+	font-size: 14px;
 }
 
 .align-horizontal {
@@ -52,7 +58,7 @@ h1, h2, h3, h4, h5, a {
 	text-decoration: none;
 	color: #555;
 	letter-spacing: .9px;
-	font-size: 11px;
+	font-size: 14px;
 }
 
 .breadcrumb {
@@ -146,7 +152,6 @@ h1, h2, h3, h4, h5, a {
 .product-thumb a, h4, p {
 	color: #555;
 	font-weight: normal;
-	font-size: 12px;
 	/*display: inline;*/
 }
 
@@ -221,6 +226,7 @@ div.pic img {
     text-align: left;
     padding: 15px;
     position: absolute;
+    font-size: 18px;
 }
 
 .lookbook-info h3 {
@@ -228,6 +234,7 @@ div.pic img {
 	text-transform: uppercase;
     border-bottom: 1px solid white;
     padding: 5px 10px;
+    font-size: 20px;
 }
 
 .lookbook-info a {
