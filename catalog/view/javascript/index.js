@@ -93,7 +93,8 @@ $(document).ready(function() {
 
 
 	$('#search-toggle').click(function() {
-		$('#search input').toggle();
+		$('#search input').slideToggle();
+		$('#search-button').slideToggle();
 	});
 
 	$('.scrollwithArrow').on('click', function() {

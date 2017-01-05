@@ -678,3 +678,25 @@ h3 {
 	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
+
+#search-input {
+	display: none;
+	width: 125px;
+	height: 28px;
+}
+#search {
+	margin-bottom: 0px;
+}
+#search-toggle {
+	vertical-align: bottom;
+}
+#search-button {
+	display: none;
+	padding: 5.5px 5px;
+}
+
+.header-group {
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 10px;
+}

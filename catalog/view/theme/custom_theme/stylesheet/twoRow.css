@@ -64,6 +64,14 @@
 /* Media Query for desktop 300px screen to 748px */
 @media (min-width: 768px) {
 
+	/* Logo size in the Navigation */
+	.logo {
+		width: 60%;
+    	height: auto;
+		margin-top: 5px;
+		display: inline-block;
+	}
+
 	/* Fix dropdown menu */
 	.dropdown:hover .dropdown-menu, .dropdown-toggle, .dropdown {
 		display: block;
