@@ -46,25 +46,36 @@
             <?php } ?>
           </select>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <p>
+            <label class="checkbox-inline">
+              <?php if ($description) { ?>
+              <input type="checkbox" name="description" value="1" id="description" checked="checked" />
+              <?php } else { ?>
+              <input type="checkbox" name="description" value="1" id="description" />
+              <?php } ?>
+              <?php echo $entry_description; ?></label>
+          </p>
+          <p>
+            <label class="checkbox-inline">
+              <?php if ($sub_category) { ?>
+              <input type="checkbox" name="sub_category" value="1" checked="checked" />
+              <?php } else { ?>
+              <input type="checkbox" name="sub_category" value="1" />
+              <?php } ?>
+              <?php echo $text_sub_category; ?></label>
+          </p>
+        </div>
         <div class="col-sm-3">
-          <label class="checkbox-inline">
-            <?php if ($sub_category) { ?>
-            <input type="checkbox" name="sub_category" value="1" checked="checked" />
-            <?php } else { ?>
-            <input type="checkbox" name="sub_category" value="1" />
-            <?php } ?>
-            <?php echo $text_sub_category; ?></label>
+          <p>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="model" value="1" />
+              Search by Model</label>
+          </p>
         </div>
       </div>
-      <p>
-        <label class="checkbox-inline">
-          <?php if ($description) { ?>
-          <input type="checkbox" name="description" value="1" id="description" checked="checked" />
-          <?php } else { ?>
-          <input type="checkbox" name="description" value="1" id="description" />
-          <?php } ?>
-          <?php echo $entry_description; ?></label>
-      </p>
       <input type="button" value="<?php echo $button_search; ?>" id="button-search" class="btn btn-primary" />
       <h2><?php echo $text_search; ?></h2>
       <?php if ($products) { ?>
@@ -108,40 +119,37 @@
       <br />
       <div class="row">
         <?php foreach ($products as $product) { ?>
-        <div class="product-layout product-list col-xs-12">
+        <div class="product-layout product-grid col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product-thumb">
-            <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
-            <div class="caption">
-              <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
-              <p><?php echo $product['description']; ?></p>
-              <?php if ($product['price']) { ?>
-              <p class="price">
-                <?php if (!$product['special']) { ?>
-                <?php echo $product['price']; ?>
-                <?php } else { ?>
-                <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+            <div class="image">
+              <div id="pos-rel">
+                <a href="<?php echo $product['href']; ?>">
+                  <img src="<?php echo end($product['images']); ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive front-pic" />
+                  <img src="<?php echo $product['images'][1]; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" />
+                </a>
+              </div>
+            </div>
+            
+            <div>
+              <div class="caption">
+                <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?>
+                <?php if($product['model']) { ?>
+                <?php echo $product['model']; ?>
                 <?php } ?>
-                <?php if ($product['tax']) { ?>
-                <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-                <?php } ?>
-              </p>
-              <?php } ?>
-              <?php if ($product['rating']) { ?>
-              <div class="rating">
-                <?php for ($i = 1; $i <= 5; $i++) { ?>
-                <?php if ($product['rating'] < $i) { ?>
-                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                <?php } else { ?>
-                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
-                <?php } ?>
+                </a></h4>
+                <?php if ($product['price']) { ?>
+                <h4 class="price"><a href="<?php echo $product['href']; ?>">
+                  <?php if (!$product['special']) { ?>
+                  <?php echo $product['price']; ?>
+                  <?php } else { ?>
+                  <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                  <?php } ?>
+                  <?php if ($product['tax']) { ?>
+                  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                  <?php } ?>
+                </a></h4>
                 <?php } ?>
               </div>
-              <?php } ?>
-            </div>
-            <div class="button-group">
-              <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
-              <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
-              <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
             </div>
           </div>
         </div>
@@ -184,6 +192,12 @@ $('#button-search').bind('click', function() {
 	if (filter_description) {
 		url += '&description=true';
 	}
+
+  var filter_model = $('#content input[name=\'model\']:checked').prop('value');
+
+  if (filter_model) {
+    url += '&model=true';
+  }
 
 	location = url;
 });
