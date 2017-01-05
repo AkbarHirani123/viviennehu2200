@@ -89,6 +89,21 @@ class ControllerProductCategory extends Controller {
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
+		if($category_id >= 83 || $category_id == 74) {
+	       if (isset($this->request->get['limit'])) {
+	         $limit = $this->request->get['limit'];
+	      } else {
+	         $limit = 100;
+
+	      }
+	      if (isset($this->request->get['sort'])) {
+			$sort = $this->request->get['sort'];
+		  } else {
+			$sort = 'p.sort_order-ASC';
+		  }
+	     }
+
+
 		if ($category_info) {
 			$this->document->setTitle($category_info['meta_title']);
 			$this->document->setDescription($category_info['meta_description']);
@@ -331,7 +346,7 @@ class ControllerProductCategory extends Controller {
 
 			$data['limits'] = array();
 
-			$limits = array_unique(array($this->config->get($this->config->get('config_theme') . '_product_limit'), 25, 50, 75, 100));
+			$limits = array_unique(array($this->config->get($this->config->get('config_theme') . '_product_limit'), 40, 60, 100));
 
 			sort($limits);
 
@@ -386,7 +401,12 @@ class ControllerProductCategory extends Controller {
 
 			$data['sort'] = $sort;
 			$data['order'] = $order;
-			$data['limit'] = $limit;
+			
+			// if ($category_info['category_id'] >= 83 || $category_info['category_id'] == 74) {
+			// 	$data['limit'] = 100;
+			// } else {
+				$data['limit'] = $limit;
+			// }
 
 			$data['continue'] = $this->url->link('common/home');
 
