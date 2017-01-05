@@ -8,6 +8,10 @@
 	z-index:10;
 }
 
+.logo img {
+	margin: 0 auto;
+}
+
 /* Media Query for mobile 300px screen to 748px */
 @media (min-width: 330px) {
 

@@ -80,7 +80,7 @@
         <div class="col-sm-3 col-md-3 product-info">
           <h1><?php echo $heading_title; ?></h1>
           <h1> Model: <?php echo $model; ?></h1>
-          <?php if ($status) { ?>
+          <?php if ($status == 1) { ?>
           <?php if ($price) { ?>
           <ul class="list-unstyled">
             <?php if (!$special) { ?>
@@ -289,7 +289,7 @@
             <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>
             <?php } ?>
           </div>
-          <? } else { /* end of status */ ?>
+          <?php } else if ($status == 0) { /* end of status */ ?>
           <br/>
           <div style="border:1px solid #555;padding: 5px 5px; text-align: center;"><span class="text-danger">Product is unavailable!</span> Contact us at <u><a href="mailto:viviennehu@viviennegu.com?Subject=Product%20<?php echo $model; ?>%20Production" target="_top">viviennehu@viviennehu.com</a></u> to ask if we can produce it.</div>
           <?php } ?>
