@@ -24,8 +24,22 @@ h1, h2, h3, h4, h5, a {
 	font-size: 16px;
 }
 
-p {
+h1 {
+	font-size: 20px;
+	letter-spacing: 1.2px;
+}
+h2 {
+	font-size: 18px;
+	letter-spacing: 1.2px;
+}
+h4>a {
 	font-size: 14px;
+	letter-spacing: 1.2px;
+}
+
+p {
+	font-size: 16px;
+	letter-spacing: 1.2px;
 }
 
 .align-horizontal {
@@ -149,7 +163,7 @@ p {
 	margin-bottom: 30px;
 }
 
-.product-thumb a, h4, p {
+.product-thumb a, .product-thumb h4, .product-thumb p {
 	color: #555;
 	font-weight: normal;
 	/*display: inline;*/
@@ -549,7 +563,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 /* End Scrollbar */
 
-.product-info h1, h2 {
+.product-info h1 {
 	font-size: 16px;
 	letter-spacing: .7px;
 }
@@ -571,6 +585,7 @@ h3 {
 .panel-title span {
 	float: right;
 	font-size: 14px;
+	letter-spacing: 1.2px;
 	/*padding-top: 3px;*/
 }
 
@@ -706,4 +721,7 @@ h3 {
 	vertical-align: middle;
 	text-align: center;
 	padding-top: 10px;
+}
+.strong {
+	letter-spacing: 1.2px;
 }

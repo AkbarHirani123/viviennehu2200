@@ -39,12 +39,12 @@
           <table class="table table-bordered">
             <thead>
               <tr>
-                <td class="text-center"><?php echo $column_image; ?></td>
-                <td class="text-left"><?php echo $column_name; ?></td>
-                <td class="text-left"><?php echo $column_model; ?></td>
-                <td class="text-left"><?php echo $column_quantity; ?></td>
-                <td class="text-right"><?php echo $column_price; ?></td>
-                <td class="text-right"><?php echo $column_total; ?></td>
+                <td class="text-center"><p><?php echo $column_image; ?></p></td>
+                <td class="text-left"><p><?php echo $column_name; ?></p></td>
+                <td class="text-left"><p><?php echo $column_model; ?></p></td>
+                <td class="text-left"><p><?php echo $column_quantity; ?></p></td>
+                <td class="text-right"><p><?php echo $column_price; ?></p></td>
+                <td class="text-right"><p><?php echo $column_total; ?></p></td>
               </tr>
             </thead>
             <tbody>
@@ -53,7 +53,7 @@
                 <td class="text-center"><?php if ($product['thumb']) { ?>
                   <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-thumbnail" /></a>
                   <?php } ?></td>
-                <td class="text-left"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+                <td class="text-left"><a href="<?php echo $product['href']; ?>"><p><?php echo $product['name']; ?></p><p></a>
                   <?php if (!$product['stock']) { ?>
                   <span class="text-danger">***</span>
                   <?php } ?>
@@ -71,15 +71,15 @@
                   <br />
                   <span class="label label-info"><?php echo $text_recurring_item; ?></span> <small><?php echo $product['recurring']; ?></small>
                   <?php } ?></td>
-                <td class="text-left"><?php echo $product['model']; ?></td>
+                <td class="text-left"><p><?php echo $product['model']; ?></p></td>
                 <td class="text-left"><div class="input-group btn-block" style="max-width: 200px;">
                     <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" class="form-control" />
                     <span class="input-group-btn">
                     <button type="submit" data-toggle="tooltip" title="<?php echo $button_update; ?>" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
                     <button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger" onclick="cart.remove('<?php echo $product['cart_id']; ?>');"><i class="fa fa-times-circle"></i></button>
                     </span></div></td>
-                <td class="text-right"><?php echo $product['price']; ?></td>
-                <td class="text-right"><?php echo $product['total']; ?></td>
+                <td class="text-right"><p><?php echo $product['price']; ?></p></td>
+                <td class="text-right"><p><?php echo $product['total']; ?></p></td>
               </tr>
               <?php } ?>
               <?php foreach ($vouchers as $voucher) { ?>
@@ -115,8 +115,8 @@
           <table class="table table-bordered">
             <?php foreach ($totals as $total) { ?>
             <tr>
-              <td class="text-right"><strong><?php echo $total['title']; ?>:</strong></td>
-              <td class="text-right"><?php echo $total['text']; ?></td>
+              <td class="text-right"><strong><p><?php echo $total['title']; ?>:</p></strong></td>
+              <td class="text-right"><p><?php echo $total['text']; ?></p></td>
             </tr>
             <?php } ?>
           </table>

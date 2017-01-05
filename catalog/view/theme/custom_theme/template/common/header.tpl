@@ -61,7 +61,7 @@
       <div class="col-sm-4">
         <ul class="list-inline header-group pull-right">
           <li><?php echo $search; ?></li>
-          <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm"><?php echo $text_account; ?></span> <span class="caret"></span></a>
+          <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm" style="font-size:12px;"><?php echo $text_account; ?></span> <span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-right">
               <?php if ($logged) { ?>
               <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>

@@ -34,12 +34,12 @@
 			<table class="table table-bordered qc-cart">
 				<thead>
 					<tr>
-						<td class="qc-image <%= parseInt(model.config.columns.image) ? '' : 'hidden' %>"><?php echo $column_image; ?>:</td>
-						<td class="qc-name <%= parseInt(model.config.columns.name) ? '' : 'hidden' %>"><?php echo $column_name; ?>:</td>
-						<td class="qc-model hidden-xs <%= parseInt(model.config.columns.model) ? '' : 'hidden' %>"><?php echo $column_model; ?>:</td>
-						<td class="qc-quantity <%= parseInt(model.config.columns.quantity) ? '' : 'hidden' %>"><?php echo $column_quantity; ?>:</td>
-						<td class="qc-price hidden-xs <%= parseInt(model.config.columns.price) && model.show_price ? '' : 'hidden' %>"><?php echo $column_price; ?>:</td>
-						<td class="qc-total <%= parseInt(model.config.columns.total) && model.show_price ? '' : 'hidden' %>"><?php echo $column_total; ?>:</td>
+						<td class="qc-image <%= parseInt(model.config.columns.image) ? '' : 'hidden' %>"><p><?php echo $column_image; ?>:</p></td>
+						<td class="qc-name <%= parseInt(model.config.columns.name) ? '' : 'hidden' %>"><p><?php echo $column_name; ?>:</p></td>
+						<td class="qc-model hidden-xs <%= parseInt(model.config.columns.model) ? '' : 'hidden' %>"><p><?php echo $column_model; ?>:</p></td>
+						<td class="qc-quantity <%= parseInt(model.config.columns.quantity) ? '' : 'hidden' %>"><p><?php echo $column_quantity; ?>:</p></td>
+						<td class="qc-price hidden-xs <%= parseInt(model.config.columns.price) && model.show_price ? '' : 'hidden' %>"><p><?php echo $column_price; ?>:</p></td>
+						<td class="qc-total <%= parseInt(model.config.columns.total) && model.show_price ? '' : 'hidden' %>"><p><?php echo $column_total; ?>:</p></td>
 					</tr>
 				</thead>
 
@@ -89,8 +89,8 @@
 							</div>
 						</td>
 
-						<td class="qc-price hidden-xs <%= parseInt(model.config.columns.price) && model.show_price  ? '' : 'hidden' %>"><%= product.price %></td>
-						<td class="qc-total <%= parseInt(model.config.columns.total) && model.show_price  ? '' : 'hidden' %>"><%= product.total %></td>
+						<td class="qc-price hidden-xs <%= parseInt(model.config.columns.price) && model.show_price  ? '' : 'hidden' %>"><p><%= product.price %></p></td>
+						<td class="qc-total <%= parseInt(model.config.columns.total) && model.show_price  ? '' : 'hidden' %>"><p><%= product.total %></p></td>
 					</tr>
 					<% }) %>
 					<% _.each(model.vouchers, function(voucher) { %>

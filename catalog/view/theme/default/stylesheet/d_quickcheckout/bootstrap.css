@@ -75,6 +75,8 @@
 #d_quickcheckout b,
 #d_quickcheckout strong {
   font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.2px;
 }
 #d_quickcheckout dfn {
   font-style: italic;
@@ -1090,6 +1092,7 @@
 #d_quickcheckout body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  letter-spacing: 1.2px;
   line-height: 1.42857143;
   color: #333;
   background-color: #ffffff;
@@ -6678,7 +6681,7 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #666;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
   width: 100%;
 }
@@ -6722,7 +6725,8 @@
   padding: 7px 0px;
 }
 #d_quickcheckout label {
-  font-size: 12px;
+  font-size: 14px;
+  letter-spacing: 1.2px;
   font-weight: normal;
 }
 #d_quickcheckout select.form-control,
@@ -6741,16 +6745,16 @@
 #d_quickcheckout input[type="search"].form-control,
 #d_quickcheckout input[type="tel"].form-control,
 #d_quickcheckout input[type="color"].form-control {
-  font-size: 12px;
+  font-size: 14px;
 }
 #d_quickcheckout .input-group input,
 #d_quickcheckout .input-group select,
 #d_quickcheckout .input-group .dropdown-menu,
 #d_quickcheckout .input-group .popover {
-  font-size: 12px;
+  font-size: 14px;
 }
 #d_quickcheckout .input-group .input-group-addon {
-  font-size: 12px;
+  font-size: 14px;
   height: 30px;
 }
 #d_quickcheckout span.hidden-xs,
