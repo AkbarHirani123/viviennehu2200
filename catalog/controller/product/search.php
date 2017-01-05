@@ -29,6 +29,12 @@ class ControllerProductSearch extends Controller {
 			$description = '';
 		}
 
+		if (isset($this->request->get['model'])) {
+			$model = $this->request->get['model'];
+		} else {
+			$model = '';
+		}
+
 		if (isset($this->request->get['category_id'])) {
 			$category_id = $this->request->get['category_id'];
 		} else {
@@ -92,6 +98,10 @@ class ControllerProductSearch extends Controller {
 
 		if (isset($this->request->get['description'])) {
 			$url .= '&description=' . $this->request->get['description'];
+		}
+
+		if (isset($this->request->get['model'])) {
+			$url .= '&model=' . $this->request->get['model'];
 		}
 
 		if (isset($this->request->get['category_id'])) {
@@ -201,6 +211,7 @@ class ControllerProductSearch extends Controller {
 				'filter_name'         => $search,
 				'filter_tag'          => $tag,
 				'filter_description'  => $description,
+				'filter_model'  	  => $model,
 				'filter_category_id'  => $category_id,
 				'filter_sub_category' => $sub_category,
 				'sort'                => $sort,
@@ -244,17 +255,25 @@ class ControllerProductSearch extends Controller {
 					$rating = false;
 				}
 
+				// makes array of additional images
+				$all_images = $this->model_catalog_product->getProductImages($result['product_id']);
+				for ($i = 1; $i < sizeof($all_images) ; $i++) { 
+					$all_images[$i] = $this->model_tool_image->resize($all_images[$i]['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+				}
+
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'name'        => $result['name'],
+					'model'		  => $result['model'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $price,
 					'special'     => $special,
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
-					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url),
+					'images'	  => $all_images
 				);
 			}
 
@@ -270,6 +289,10 @@ class ControllerProductSearch extends Controller {
 
 			if (isset($this->request->get['description'])) {
 				$url .= '&description=' . $this->request->get['description'];
+			}
+
+			if (isset($this->request->get['model'])) {
+				$url .= '&model=' . $this->request->get['model'];
 			}
 
 			if (isset($this->request->get['category_id'])) {
@@ -356,6 +379,10 @@ class ControllerProductSearch extends Controller {
 				$url .= '&description=' . $this->request->get['description'];
 			}
 
+			if (isset($this->request->get['model'])) {
+				$url .= '&model=' . $this->request->get['model'];
+			}
+
 			if (isset($this->request->get['category_id'])) {
 				$url .= '&category_id=' . $this->request->get['category_id'];
 			}
@@ -398,6 +425,10 @@ class ControllerProductSearch extends Controller {
 
 			if (isset($this->request->get['description'])) {
 				$url .= '&description=' . $this->request->get['description'];
+			}
+
+			if (isset($this->request->get['model'])) {
+				$url .= '&model=' . $this->request->get['model'];
 			}
 
 			if (isset($this->request->get['category_id'])) {
@@ -446,6 +477,7 @@ class ControllerProductSearch extends Controller {
 
 		$data['search'] = $search;
 		$data['description'] = $description;
+		$data['model'] = $model;
 		$data['category_id'] = $category_id;
 		$data['sub_category'] = $sub_category;
 

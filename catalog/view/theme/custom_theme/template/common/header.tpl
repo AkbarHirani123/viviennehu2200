@@ -47,9 +47,9 @@
 <header class="navbar">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-sm-4">
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <div class="logo">
           <?php if ($logo) { ?>
           <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
@@ -58,9 +58,10 @@
           <?php } ?>
         </div>
       </div>
-      <div class="col-sm-3">
-        <ul class="list-inline">
-          <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
+      <div class="col-sm-4">
+        <ul class="list-inline header-group pull-right">
+          <li><?php echo $search; ?></li>
+          <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm" style="font-size:12px;"><?php echo $text_account; ?></span> <span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-right">
               <?php if ($logged) { ?>
               <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>

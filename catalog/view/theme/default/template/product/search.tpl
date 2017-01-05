@@ -184,6 +184,12 @@ $('#button-search').bind('click', function() {
 	if (filter_description) {
 		url += '&description=true';
 	}
+  
+  var filter_model = $('#content input[name=\'model\']:checked').prop('value');
+
+  if (filter_model) {
+    url += '&model=true';
+  }
 
 	location = url;
 });

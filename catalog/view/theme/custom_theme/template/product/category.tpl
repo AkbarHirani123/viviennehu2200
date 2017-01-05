@@ -97,20 +97,8 @@
                 <?php echo $product['model']; ?>
                 <?php } ?>
                 </a></h4>
-
-                <?php if ($product['rating']) { ?>
-                <div class="rating">
-                  <?php for ($i = 1; $i <= 5; $i++) { ?>
-                  <?php if ($product['rating'] < $i) { ?>
-                  <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                  <?php } else { ?>
-                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
-                  <?php } ?>
-                  <?php } ?>
-                </div>
-                <?php } ?>
                 <?php if ($product['price']) { ?>
-                <p class="price">
+                <h4 class="price"><a href="<?php echo $product['href']; ?>">
                   <?php if (!$product['special']) { ?>
                   <?php echo $product['price']; ?>
                   <?php } else { ?>
@@ -119,7 +107,7 @@
                   <?php if ($product['tax']) { ?>
                   <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
                   <?php } ?>
-                </p>
+                </a></h4>
                 <?php } ?>
               </div>
             </div>

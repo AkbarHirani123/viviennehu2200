@@ -91,9 +91,6 @@
                 <?php if ($tax) { ?>
                   <li><?php echo $text_tax; ?> <?php echo $tax; ?></li>
                 <?php } ?>
-                <?php if ($points) { ?>
-                <li><?php echo $text_points; ?> <?php echo $points; ?></li>
-                <?php } ?>
                 <?php if ($discounts) { ?>
                   <li>
                     <hr>
@@ -110,17 +107,20 @@
                 <?php if ($reward) { ?>
                   <li><?php echo $text_reward; ?> <?php echo $reward; ?></li>
                 <?php } ?>
-                <li>
+                <li><p>
                   <?php echo $text_stock; ?> 
                   <div id="instock">
                   <?php if($stock==='Not In Stock') { ?>
-                    <span class="text-danger">
-                      <?php echo $stock; ?>
+                    <span class="text-danger"><p>
+                      <?php echo $stock; ?></p>
                     </span>
                   <?php } else { ?>
+                  <p>
                   <?php echo $stock; ?>
+                  </p>
                   <?php } ?>
                   </div>
+                  </p>
                 </li>
               </ul>
             <?php } ?>
