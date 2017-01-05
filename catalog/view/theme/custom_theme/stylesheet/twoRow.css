@@ -123,10 +123,6 @@
 		letter-spacing: 1.5px;
 	}
 
-	.navbar:hover, .navbar:focus {
-		opacity: 1;
-	}
-
 	.navbar-nav .dropdown>li>a, .navbar-nav .open .dropdown-menu>li>a {
 		color: #555;
 		font-weight: 400;
@@ -139,6 +135,10 @@
 		color: #222; 
 		background-color: #ddd; 
 		background-image: none; 
+	}
+	
+	.navbar:hover {
+		opacity: 1 !important;
 	}
 
 	.navbar {
