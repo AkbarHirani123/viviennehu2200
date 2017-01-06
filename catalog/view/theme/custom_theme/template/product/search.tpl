@@ -71,7 +71,11 @@
         <div class="col-sm-3">
           <p>
             <label class="checkbox-inline">
+              <?php if ($model) { ?>
+              <input type="checkbox" name="model" value="1" checked="checked" />
+              <?php } else { ?>
               <input type="checkbox" name="model" value="1" />
+              <?php } ?>
               Search by Model</label>
           </p>
         </div>
@@ -82,38 +86,26 @@
       <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p>
       <div class="row">
         <div class="col-sm-3 hidden-xs">
-          <div class="btn-group">
-            <button type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>
-            <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
+        </div>
+        <div class="col-md-1 col-md-offset-2 col-sm-3 col-xs-6 text-right">
+          <div class="dropdown">
+            <p class="sort dropdown-toggle">Sort By</p>
+            <ul class="dropdown-menu sort-content">
+              <?php foreach ($sorts as $sorts) { ?>
+                <li><a href="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></a></li>
+              <?php } ?>
+            </ul>
           </div>
         </div>
-        <div class="col-sm-1 col-sm-offset-2 text-right">
-          <label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
-        </div>
-        <div class="col-sm-3 text-right">
-          <select id="input-sort" class="form-control col-sm-3" onchange="location = this.value;">
-            <?php foreach ($sorts as $sorts) { ?>
-            <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-            <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
-            <?php } else { ?>
-            <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
-            <?php } ?>
-            <?php } ?>
-          </select>
-        </div>
-        <div class="col-sm-1 text-right">
-          <label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>
-        </div>
-        <div class="col-sm-2 text-right">
-          <select id="input-limit" class="form-control" onchange="location = this.value;">
-            <?php foreach ($limits as $limits) { ?>
-            <?php if ($limits['value'] == $limit) { ?>
-            <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
-            <?php } else { ?>
-            <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
-            <?php } ?>
-            <?php } ?>
-          </select>
+        <div class="col-md-1 col-md-offset-2 col-sm-3 col-xs-6 text-right">
+          <div class="dropdown">
+            <p class="sort dropdown-toggle">View</p>
+            <ul class="dropdown-menu sort-content">
+              <?php foreach ($limits as $limits) { ?>
+                <li><a href="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></a></li>
+              <?php } ?>
+            </ul>
+          </div>
         </div>
       </div>
       <br />

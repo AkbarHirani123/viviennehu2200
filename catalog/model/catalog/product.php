@@ -171,7 +171,7 @@ class ModelCatalogProduct extends Model {
 				}
 
 				if (!empty($data['filter_model'])) {
-					$sql .= " OR pd.model LIKE '%" . $this->db->escape($data['filter_name']) . "%'";
+					$sql .= " OR p.model LIKE '%" . $this->db->escape($data['filter_name']) . "%'";
 				}
 			}
 
@@ -315,7 +315,7 @@ class ModelCatalogProduct extends Model {
 				}
 
 				if (!empty($data['filter_model'])) {
-					$sql .= " OR pd.model LIKE '%" . $this->db->escape($data['filter_name']) . "%'";
+					$sql .= " OR p.model LIKE '%" . $this->db->escape($data['filter_name']) . "%'";
 				}
 			}
 
@@ -663,7 +663,7 @@ class ModelCatalogProduct extends Model {
 				}
 
 				if (!empty($data['filter_model'])) {
-					$sql .= " OR pd.model LIKE '%" . $this->db->escape($data['filter_name']) . "%'";
+					$sql .= " OR p.model LIKE '%" . $this->db->escape($data['filter_name']) . "%'";
 				}
 			}
 

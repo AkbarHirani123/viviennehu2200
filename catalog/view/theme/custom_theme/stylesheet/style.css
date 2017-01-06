@@ -725,3 +725,13 @@ h3 {
 .strong {
 	letter-spacing: 1.2px;
 }
+
+#cart-table-popup tbody {
+	height: 350px;
+	overflow-y: scroll;
+	display:block;
+}
+
+#cart-table-popup thead {
+	display: block;
+}
