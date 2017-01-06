@@ -1,7 +1,4 @@
 /** { opacity: inherit; filter: inherit; } */
-
-
-
 html {
 	background: #ccc;
 }
@@ -766,4 +763,3 @@ footer .list-unstyled li {
 #cart-table-popup thead {
 	display: block;
 }
-
