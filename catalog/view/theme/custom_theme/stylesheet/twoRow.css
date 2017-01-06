@@ -64,8 +64,16 @@
 /* Media Query for desktop 300px screen to 748px */
 @media (min-width: 768px) {
 
+	/* Logo size in the Navigation */
+	.logo {
+		width: 60%;
+    	height: auto;
+		margin-top: 5px;
+		display: inline-block;
+	}
+
 	/* Fix dropdown menu */
-	.dropdown:hover .dropdown-menu, .dropdown-toggle, .dropdown {
+	.dropdown:hover .dropdown-menu, .dropdown-toggle, .dropdown, .dropdown.open .dropdown-menu {
 		display: block;
 		margin: auto;
 		z-index: 10;	
@@ -84,20 +92,19 @@
 	    opacity: 0;
 	    visibility: hidden;
 	}
-	.navbar-nav .open .dropdown-menu {
+	.navbar-nav .dropdown-menu, .navbar-nav .open .dropdown-menu {
 		background-color: #fff;
 		min-width: 160px;
-    	padding: 10px 0px;
 	}
 
-	.dropdown:hover .dropdown-menu {
+	.dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu {
 	    -webkit-transition: max-height 1s, opacity 0.2s, visibility 0s;
 	    -moz-transition: max-height 1s, opacity 0.2s, visibility 0s;
 	    -ms-transition: max-height 1s, opacity 0.2s, visibility 0s;
 	    -o-transition: max-height 1s, opacity 0.2s, visibility 0s;
 	    transition: max-height 1s, opacity 0.2s, visibility 0s;
-
-	    max-height: 400px;
+	    margin-top: 3px;
+	    max-height: 600px;
 	    opacity: 1;
 	    visibility: visible;
 	}
@@ -116,13 +123,11 @@
 		letter-spacing: 1.5px;
 	}
 
-	.navbar:hover, .navbar:focus {
-		opacity: 1;
-	}
-
-	.dropdown li a {
+	.navbar-nav .dropdown>li>a, .navbar-nav .open .dropdown-menu>li>a {
 		color: #555;
-		font-size: 13px;
+		font-weight: 400;
+		letter-spacing: 1.5;
+		line-height: 1.42857143 !important;
 	}
 
 	.dropdown-menu li > a:hover {
@@ -130,6 +135,10 @@
 		color: #222; 
 		background-color: #ddd; 
 		background-image: none; 
+	}
+	
+	.navbar:hover {
+		opacity: 1 !important;
 	}
 
 	.navbar {
@@ -162,6 +171,11 @@
 	.dropdown-menu li {
 		text-align: left;
 		padding-bottom: 3px;
+	}
+
+	.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+		background-color: #fff;
+		border-color: transparent;
 	}
 
 }

@@ -96,11 +96,8 @@ class ControllerProductCategory extends Controller {
 	         $limit = 100;
 
 	      }
-	  //     if (isset($this->request->get['sort'])) {
-			// $sort = $this->request->get['sort'];
-		 //  } else {
 			$sort = 'p.sort_order-ASC';
-		  // }
+			$order = 'ASC';
 	     }
 
 

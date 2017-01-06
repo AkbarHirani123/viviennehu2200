@@ -23,12 +23,31 @@ h1, h2, h3, h4, h5, a, li, p {
 	color: #555;
 }
 
+<<<<<<< HEAD
 h1,h2 {
 	font-size: 22px;
 }
 
 h2, h3, h4, h5, a, li, p {
 	font-size: 16px;
+=======
+h1 {
+	font-size: 20px;
+	letter-spacing: 1.2px;
+}
+h2 {
+	font-size: 18px;
+	letter-spacing: 1.2px;
+}
+h4>a {
+	font-size: 14px;
+	letter-spacing: 1.2px;
+}
+
+p {
+	font-size: 16px;
+	letter-spacing: 1.2px;
+>>>>>>> 19740cdc0b24ce271db4eb8a2a50b69419871e71
 }
 
 .align-horizontal {
@@ -152,7 +171,7 @@ h2, h3, h4, h5, a, li, p {
 	margin-bottom: 30px;
 }
 
-.product-thumb a, h4, p {
+.product-thumb a, .product-thumb h4, .product-thumb p {
 	color: #555;
 	font-weight: normal;
 	/*display: inline;*/
@@ -552,7 +571,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 /* End Scrollbar */
 
-.product-info h1, h2 {
+.product-info h1 {
 	font-size: 16px;
 	letter-spacing: .7px;
 }
@@ -574,6 +593,7 @@ h3 {
 .panel-title span {
 	float: right;
 	font-size: 14px;
+	letter-spacing: 1.2px;
 	/*padding-top: 3px;*/
 }
 
@@ -714,5 +734,29 @@ footer .list-unstyled {
 footer .list-unstyled li {
 	display: inline-block;
 	width: 12%;
-
 }
+
+#search-input {
+	display: none;
+	width: 125px;
+	height: 28px;
+}
+
+#search {
+	margin-bottom: 0px;
+}
+#search-toggle {
+	vertical-align: bottom;
+}
+#search-button {
+	display: none;
+	padding: 5.5px 5px;
+}
+
+.header-group {
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 10px;
+}
+.strong {
+	letter-spacing: 1.2px;

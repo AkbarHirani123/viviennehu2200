@@ -86,7 +86,8 @@ $(document).ready(function() {
 
 
 	$('#search-toggle').click(function() {
-		$('#search input').toggle();
+		$('#search input').slideToggle();
+		$('#search-button').slideToggle();
 	});
 
 	$('.scrollwithArrow').on('click', function() {
@@ -100,30 +101,11 @@ $(document).ready(function() {
 });
 
 $(window).on('scroll', function (e) {
-	$('.navbar').css('background-color', 'white' );
-	$('.navbar').css('opacity', (.6) );
 
-	$(window).mousemove(function(){
-		$(".navbar").mouseover(function() {
-			$(this).css('background-color','white');
-			$(this).css('opacity', (1));
-		});
-
-		$(".navbar").mouseout(function() {
-			if($(window).scrollTop() == 0){
-				$(this).css('background-color','white');
-		        $('.navbar').css('opacity', (1) );
-		    }
-			else{
-				$('.navbar').css('background-color', 'white' );
-				$(this).css('opacity', (.6));
-			}
-		});
-	});
-	
 	if($(window).scrollTop() == 0){
-		$('.navbar').css('background-color','white');
         $('.navbar').css('opacity', (1) );
+    }else {
+    	$('.navbar').css('opacity', (.6) );
     }
 
     });
