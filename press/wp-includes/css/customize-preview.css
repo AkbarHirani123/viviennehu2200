@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+.customize-partial-refreshing {
+	opacity: 0.25;
+	-webkit-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+	cursor: progress;
+}
+=======
+.customize-partial-refreshing {
+	opacity: 0.25;
+	-webkit-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+	cursor: progress;
+}
+>>>>>>> 640e5167c7ef51cf7838bf786b7e85e2d2c82871

@@ -96,11 +96,8 @@ class ControllerProductCategory extends Controller {
 	         $limit = 100;
 
 	      }
-	      if (isset($this->request->get['sort'])) {
-			$sort = $this->request->get['sort'];
-		  } else {
 			$sort = 'p.sort_order-ASC';
-		  }
+			$order = 'ASC';
 	     }
 
 
@@ -401,12 +398,7 @@ class ControllerProductCategory extends Controller {
 
 			$data['sort'] = $sort;
 			$data['order'] = $order;
-			
-			// if ($category_info['category_id'] >= 83 || $category_info['category_id'] == 74) {
-			// 	$data['limit'] = 100;
-			// } else {
-				$data['limit'] = $limit;
-			// }
+			$data['limit'] = $limit;
 
 			$data['continue'] = $this->url->link('common/home');
 

@@ -16,7 +16,7 @@ html, body {
 	color: #555;
 
 }	
-h1, h2, h3, h4, h5, a {
+h1, h2, h3, h4, h5, a, li, p {
 	font-family: 'Pathway Gothic One', sans-serif !important;
 	margin: 0 auto;
 	min-height: 100%;
@@ -24,14 +24,17 @@ h1, h2, h3, h4, h5, a {
 	font-size: 16px;
 }
 
-h1 {
-	font-size: 20px;
+h1, h2 {
+	font-size: 22px;
 	letter-spacing: 1.2px;
 }
-h2 {
-	font-size: 18px;
+
+
+h3, h4, h5, a, li, p {
+	font-size: 16px;
 	letter-spacing: 1.2px;
 }
+
 h4>a {
 	font-size: 14px;
 	letter-spacing: 1.2px;
@@ -701,11 +704,39 @@ h3 {
 	transform: rotate(-45deg);
 }
 
+.social {
+	float: right;
+	padding-top: 15px;
+}
+
+.social li,
+.social ul,  
+.social span {
+	display: inline;
+	padding: 3px;
+}
+
+.info {
+	float: left;
+	padding-top: 20px;
+}
+
+footer .list-unstyled {
+	width: auto;
+	margin: 0 auto;
+}
+
+footer .list-unstyled li {
+	display: inline-block;
+	width: 12%;
+}
+
 #search-input {
 	display: none;
 	width: 125px;
 	height: 28px;
 }
+
 #search {
 	margin-bottom: 0px;
 }
@@ -735,3 +766,4 @@ h3 {
 #cart-table-popup thead {
 	display: block;
 }
+
