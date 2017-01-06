@@ -23,14 +23,14 @@ h1, h2, h3, h4, h5, a, li, p {
 	color: #555;
 }
 
-<<<<<<< HEAD
 h1,h2 {
 	font-size: 22px;
 }
 
 h2, h3, h4, h5, a, li, p {
 	font-size: 16px;
-=======
+}
+
 h1 {
 	font-size: 20px;
 	letter-spacing: 1.2px;
@@ -47,7 +47,6 @@ h4>a {
 p {
 	font-size: 16px;
 	letter-spacing: 1.2px;
->>>>>>> 19740cdc0b24ce271db4eb8a2a50b69419871e71
 }
 
 .align-horizontal {
@@ -709,16 +708,28 @@ h3 {
 	transform: rotate(-45deg);
 }
 
+footer li {
+	color: rgb(204, 204, 204);
+}
+
 .social {
-	float: right;
 	padding-top: 15px;
 }
 
-.social li,
-.social ul,  
-.social span {
-	display: inline;
-	padding: 3px;
+.social li {
+	display: inline-block;
+    padding: 10px;
+    text-align: center;
+    width: 15%;
+}
+
+.social li img {
+    margin: 0px 10px;
+}
+
+.social ul {
+	width: auto;
+	margin: 0 auto;
 }
 
 .info {
@@ -734,6 +745,7 @@ footer .list-unstyled {
 footer .list-unstyled li {
 	display: inline-block;
 	width: 12%;
+	text-align: center;
 }
 
 #search-input {

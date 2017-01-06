@@ -1,14 +1,14 @@
 <footer>
   <div class="container">
     <div class="social">
-        <span>Follow us:</span>
         <ul>
-        <li class="youtube"><a href="http://www.youtube.com/user/viviennehuoffical" target=""><img src="image/catalog/icons/youtube.png"></a></li>
-        <li class="facebook"><a href="http://www.facebook.com/pages/Vivienne-Hu/644049312275197" target=""><img src="image/catalog/icons/facebook.png"></a></li>
-        <li class="twitter"><a href="https://twitter.com/Vivienne_Hu" target=""><img src="image/catalog/icons/twitter.png"></a></li>
-        <li class="pinterest"><a href="http://pinterest.com/viviennehunj/" target=""><img src="image/catalog/icons/pinterest.png"></a></li>
-        <li class="tumblr"><a href="http://viviennehu.tumblr.com" target=""><img src="image/catalog/icons/tumblr.png"></a></li>
-        <li class="instagram"><a href="http://instagram.com/viviennehustudio" target=""><img src="image/catalog/icons/instragram.png"></a></li>
+        <!-- <li>Follow Us:</li> -->
+        <li class="youtube"><a href="http://www.youtube.com/user/viviennehuoffical" target=""><img src="image/catalog/icons/youtube.png">Youtube</a></li>
+        <li class="facebook"><a href="http://www.facebook.com/pages/Vivienne-Hu/644049312275197" target=""><img src="image/catalog/icons/facebook.png">Facebook</a></li>
+        <li class="twitter"><a href="https://twitter.com/Vivienne_Hu" target=""><img src="image/catalog/icons/twitter.png">Twitter</a></li>
+        <li class="pinterest"><a href="http://pinterest.com/viviennehunj/" target=""><img src="image/catalog/icons/pinterest.png">Pinterest</a></li>
+        <li class="tumblr"><a href="http://viviennehu.tumblr.com" target=""><img src="image/catalog/icons/tumblr.png">Tumblr</a></li>
+        <li class="instagram"><a href="http://instagram.com/viviennehustudio" target=""><img src="image/catalog/icons/instragram.png">Instagram</a></li>
         </ul>
       </div>
     <div class="row">
