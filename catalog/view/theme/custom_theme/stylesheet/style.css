@@ -1,7 +1,4 @@
 /** { opacity: inherit; filter: inherit; } */
-
-
-
 html {
 	background: #ccc;
 }
@@ -21,24 +18,20 @@ h1, h2, h3, h4, h5, a, li, p {
 	margin: 0 auto;
 	min-height: 100%;
 	color: #555;
+	font-size: 16px;
 }
 
 h1,h2 {
 	font-size: 22px;
+	letter-spacing: 1.2px;
 }
 
-h2, h3, h4, h5, a, li, p {
+
+h3, h4, h5, a, li, p {
 	font-size: 16px;
+	letter-spacing: 1.2px;
 }
 
-h1 {
-	font-size: 20px;
-	letter-spacing: 1.2px;
-}
-h2 {
-	font-size: 18px;
-	letter-spacing: 1.2px;
-}
 h4>a {
 	font-size: 14px;
 	letter-spacing: 1.2px;
@@ -772,3 +765,14 @@ footer .list-unstyled li {
 }
 .strong {
 	letter-spacing: 1.2px;
+}
+
+#cart-table-popup tbody {
+	height: 350px;
+	overflow-y: scroll;
+	display:block;
+}
+
+#cart-table-popup thead {
+	display: block;
+}

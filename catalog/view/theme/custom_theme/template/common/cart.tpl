@@ -3,7 +3,7 @@
   <ul class="dropdown-menu dropdown-menu-right hidden-xs">
     <?php if ($products || $vouchers) { ?>
     <li>
-      <table class="table table-striped">
+      <table id="cart-table-popup" class="table table-striped">
         <?php foreach ($products as $product) { ?>
         <tr>
           <td class="text-center"><?php if ($product['thumb']) { ?>
