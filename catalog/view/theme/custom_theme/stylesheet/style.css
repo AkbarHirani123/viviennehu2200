@@ -630,8 +630,10 @@ h3 {
 	color: #555;
 }
 
-.carousel-control.left {
-	left: 25%;
+@media (min-width: 768px) {
+	.carousel-control.left {
+		left: 25%;
+	}
 }
 
 #cart .btn-danger.btn-xs {
@@ -647,8 +649,10 @@ h3 {
 	overflow: scroll;
 }
 
-.carousel-inner {
-	width: 75%;
+@media (min-width: 768px) {
+	.carousel-inner {
+		width: 75%;
+	}
 }
 /* Indicators list style */
 .article-slide .carousel-indicators {
@@ -656,7 +660,8 @@ h3 {
     left: 0;
     margin-left: 20px;
     width: 100%;
-    height: 100vh;
+    position: relative;
+    display: block;
 }
 /* Indicators list style */
 .article-slide .carousel-indicators li {
