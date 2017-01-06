@@ -37,10 +37,9 @@
     </div>
     <div class="row">          
       <div class="info">
-      <span>© 2012~2017 Vivienne Hu</span>   
-      </div> 
+      <!-- <span>© 2012~2017 Vivienne Hu</span> -->   
       <p><?php echo $powered; ?></p>
-      
+      </div>
     </div>
     <hr>
     

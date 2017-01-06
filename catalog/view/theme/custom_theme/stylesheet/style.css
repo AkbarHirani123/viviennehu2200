@@ -701,12 +701,12 @@ h3 {
 	transform: rotate(-45deg);
 }
 
-footer li {
-	color: rgb(204, 204, 204);
+footer {
+	padding-top: 20px;
 }
 
-.social {
-	padding-top: 15px;
+footer li {
+	color: rgb(204, 204, 204);
 }
 
 .social li {
@@ -726,8 +726,9 @@ footer li {
 }
 
 .info {
-	float: left;
-	padding-top: 20px;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 25px;
 }
 
 footer .list-unstyled {
