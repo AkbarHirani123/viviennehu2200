@@ -26,6 +26,8 @@
 	.nav li {
 		text-align: center;
 		padding-bottom: 5px;
+		display: inline-block;
+    	width: 20%;
 	}
 
 	.nav a {
@@ -107,6 +109,8 @@
 	    max-height: 600px;
 	    opacity: 1;
 	    visibility: visible;
+	    border: none;
+    	border-radius: 0px;
 	}
 
 	/* make responsive image fit to li in navigation */
@@ -149,7 +153,7 @@
 		margin-top: -110px;
 		border-bottom:none;
 		background-color: white;
-		opacity: .6;
+		opacity: 1;
 		transition: all 1s;
 		white-space: nowrap;
 		border-radius: 0px;
@@ -169,6 +173,8 @@
 	}
 
 	.dropdown-menu li {
+		display: block;
+		width: auto;
 		text-align: left;
 		padding-bottom: 3px;
 	}

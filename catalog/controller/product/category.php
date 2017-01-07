@@ -412,7 +412,8 @@ class ControllerProductCategory extends Controller {
 			// $this->response->setOutput($this->load->view('product/category', $data));
 
 			$config_theme = $this->config->get('config_theme') == 'theme_default' ? 'default' : $this->config->get('config_theme');
-			if ($category_info['category_id'] >= 83 || $category_info['category_id'] == 74) {
+			if (($category_info['category_id'] >= 83 && $category_info['category_id'] < 101 && $category_info['category_id'] != 86) || 
+				$category_info['category_id'] == 74) {
     			$view = 'product/lookbook';
 			} else {
 			    $view = 'product/category';

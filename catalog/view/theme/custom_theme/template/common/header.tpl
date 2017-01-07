@@ -87,10 +87,10 @@
               <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav col-md-12">
                   <div class="row">
-                  <?php $class = 12 / sizeof($categories);?>
+                  <?php $class = 8 / sizeof($categories);?>
                   <?php foreach ($categories as $category) { ?>
                   <?php if ($category['children']) { ?>
-                  <li class="dropdown col-md-<?php echo $class ?> col-sm-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo strtoupper($category['name']); ?></a>
+                  <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo strtoupper($category['name']); ?></a>
                       <div class="dropdown-inner">
                         <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
                         <ul class="dropdown-menu">
@@ -102,9 +102,10 @@
                       </div>
                   </li>
                   <?php } else { ?>
-                  <li class="col-md-<?php echo $class ?> col-sm-<?php echo $class ?>"><a href="<?php echo $category['href']; ?>"><?php echo strtoupper($category['name']); ?></a></li>
+                  <li><a href="<?php echo $category['href']; ?>"><?php echo strtoupper($category['name']); ?></a></li>
                   <?php } ?>
                   <?php } ?>
+                  <li><a href="">PRESS</a></li>
                 </div>
                 </ul>
               </div>
