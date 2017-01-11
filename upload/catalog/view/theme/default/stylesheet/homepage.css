@@ -1,0 +1,10 @@
+/* Homepage */
+.homepage {
+	margin-bottom: 10px;
+	padding: 0 10px 20px;
+}
+.homepage img {
+	margin-bottom: 10px;
+	border: 1px solid #dddddd;
+	padding: 2px;
+}
