@@ -37,7 +37,7 @@
         }
 
         public function updateTaxAddress() {
-            //$this->tax->clearRates();
+            $this->tax->clearRates();
             $address = $this->paymentOrShippingAddress();
             $this->tax->setShippingAddress($address['country_id'], $address['zone_id']);
             $this->tax->setPaymentAddress($this->session->data['payment_address']['country_id'], $this->session->data['payment_address']['zone_id']);

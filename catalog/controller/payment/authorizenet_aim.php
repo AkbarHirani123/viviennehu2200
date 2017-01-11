@@ -38,7 +38,8 @@ class ControllerPaymentAuthorizeNetAim extends Controller {
 
 	public function send() {
 		if ($this->config->get('authorizenet_aim_server') == 'live') {
-			$url = 'https://secure.authorize.net/gateway/transact.dll';
+			//$url = 'https://secure.authorize.net/gateway/transact.dll';
+			$url = 'https://secure.nmi.com/gateway/transact.dll';
 		} elseif ($this->config->get('authorizenet_aim_server') == 'test') {
 			$url = 'https://test.authorize.net/gateway/transact.dll';
 		}
@@ -162,12 +163,16 @@ class ControllerPaymentAuthorizeNetAim extends Controller {
 					$message .= 'Cardholder Authentication Verification Response: ' . $response_info['40'] . "\n";
 				}
 
+				echo '123';
+
 				if (!$this->config->get('authorizenet_aim_hash') || (strtoupper($response_info[38]) == strtoupper(md5($this->config->get('authorizenet_aim_hash') . $this->config->get('authorizenet_aim_login') . $response_info[7] . $this->currency->format($order_info['total'], $order_info['currency_code'], 1.00000, false))))) {
 					$this->model_checkout_order->addOrderHistory($this->session->data['order_id'], $this->config->get('authorizenet_aim_order_status_id'), $message, false);
+					echo '123';
 				} else {
 					$this->model_checkout_order->addOrderHistory($this->session->data['order_id'], $this->config->get('config_order_status_id'));
+					echo '123';
 				}
-
+				echo '123';
 				$json['redirect'] = $this->url->link('checkout/success', '', true);
 			} else {
 				$json['error'] = $response_info[4];

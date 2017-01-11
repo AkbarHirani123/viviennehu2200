@@ -504,15 +504,37 @@ class ModelModuleDQuickcheckout extends Model {
 		
 		$result['step']['payment_address']['fields'] = $result['step']['payment_address']['fields'] + $this->getCustomFieldsConfigDataStep('account');
 		$result['step']['payment_address']['fields'] = $result['step']['payment_address']['fields'] + $this->getCustomFieldsConfigDataStep('address');
+
+		$result['step']['shipping_address']['fields']['agree']['information_id'] = $this->config->get('config_account_id');
+		$result['step']['shipping_address']['fields']['agree']['error'][0]['information_id'] = $this->config->get('config_account_id');
+
 		$result['step']['shipping_address']['fields'] = $result['step']['shipping_address']['fields'] + $this->getCustomFieldsConfigDataStep('address');
-		
+
+		$result['account']['guest']['payment_address']['fields']['agree']['information_id'] = $this->config->get('config_account_id');
+		$result['account']['guest']['payment_address']['fields']['agree']['error'][0]['information_id'] = $this->config->get('config_account_id');
 		$result['account']['guest']['payment_address']['fields'] = $result['account']['guest']['payment_address']['fields'] + $this->getCustomFieldsConfigDataAccount('account');
+
 		$result['account']['guest']['payment_address']['fields'] = $result['account']['guest']['payment_address']['fields'] + $this->getCustomFieldsConfigDataAccount('address');
+
+		$result['account']['guest']['shipping_address']['fields']['agree']['information_id'] = $this->config->get('config_account_id');
+		$result['account']['guest']['shipping_address']['fields']['agree']['error'][0]['information_id'] = $this->config->get('config_account_id');
 		$result['account']['guest']['shipping_address']['fields'] = $result['account']['guest']['shipping_address']['fields'] + $this->getCustomFieldsConfigDataAccount('address');
+
+		$result['account']['register']['payment_address']['fields']['agree']['information_id'] = $this->config->get('config_account_id');
+		$result['account']['register']['payment_address']['fields']['agree']['error'][0]['information_id'] = $this->config->get('config_account_id');
 		$result['account']['register']['payment_address']['fields'] = $result['account']['register']['payment_address']['fields'] + $this->getCustomFieldsConfigDataAccount('account');
 		$result['account']['register']['payment_address']['fields'] = $result['account']['register']['payment_address']['fields'] + $this->getCustomFieldsConfigDataAccount('address');
+
+		$result['account']['register']['shipping_address']['fields']['agree']['information_id'] = $this->config->get('config_account_id');
+		$result['account']['register']['shipping_address']['fields']['agree']['error'][0]['information_id'] = $this->config->get('config_account_id');
 		$result['account']['register']['shipping_address']['fields'] = $result['account']['register']['shipping_address']['fields'] + $this->getCustomFieldsConfigDataAccount('address');
+
+		$result['account']['logged']['payment_address']['fields']['agree']['information_id'] = $this->config->get('config_account_id');
+		$result['account']['logged']['payment_address']['fields']['agree']['error'][0]['information_id'] = $this->config->get('config_account_id');
 		$result['account']['logged']['payment_address']['fields'] = $result['account']['logged']['payment_address']['fields'] + $this->getCustomFieldsConfigDataAccount('address');
+
+		$result['account']['logged']['shipping_address']['fields']['agree']['information_id'] = $this->config->get('config_account_id');
+		$result['account']['logged']['shipping_address']['fields']['agree']['error'][0]['information_id'] = $this->config->get('config_account_id');
 		$result['account']['logged']['shipping_address']['fields'] = $result['account']['logged']['shipping_address']['fields'] + $this->getCustomFieldsConfigDataAccount('address');
 
 		if(!isset($this->request->post['config'])){

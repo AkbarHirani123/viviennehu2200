@@ -100,6 +100,7 @@
                   <?php } ?>
                 <?php } ?>
               </ul>
+              <br/>
               <ul class="list-unstyled">
                 <?php if ($manufacturer) { ?>
                   <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
@@ -286,7 +287,7 @@
           </div>
           <?php } else if($status == 0) { /* end of status */ ?>
             <br/>
-            <div style="border:1px solid #555;padding: 5px 5px; text-align: center;"><span class="text-danger">Product is unavailable!</span> Contact us at <u><a href="mailto:viviennehu@viviennegu.com?Subject=Product%20<?php echo $model; ?>%20Production" target="_top">viviennehu@viviennehu.com</a></u> to ask if we can produce it.</div>
+            <div style="border:1px solid #555;padding: 5px 5px; text-align: center;"><span class="text-danger">Product is unavailable!</span> Contact us at <u><a href="mailto:sales@viviennehu.com?Subject=Product%20<?php echo $model; ?>%20Production" target="_top">sales@viviennehu.com</a></u> to ask if we can produce it.</div>
           <?php } ?>
 
           <?php if ($review_status) { ?>
@@ -332,7 +333,7 @@
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                   <h4 class="panel-title">
                     <?php echo $tab_attribute; ?>
-                    <span class="glyphicon-plus"></span>
+                    <span class="glyphicon-plus" style="font-size:20px;"></span>
                   </h4>
                 </a>
                 </h4>
@@ -419,6 +420,18 @@
               </div>
             </div>
             <?php } ?>
+            <hr/>
+            <?php if ($tags) { ?>
+            <p><?php echo $text_tags; ?>
+              <?php for ($i = 0; $i < count($tags); $i++) { ?>
+              <?php if ($i < (count($tags) - 1)) { ?>
+              <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>,
+              <?php } else { ?>
+              <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>
+              <?php } ?>
+              <?php } ?>
+            </p>
+            <?php } ?>
           </div> 
         </div>
       </div>
@@ -481,17 +494,6 @@
         <?php $i++; ?>
         <?php } ?>
       </div>
-      <?php } ?>
-      <?php if ($tags) { ?>
-      <p><?php echo $text_tags; ?>
-        <?php for ($i = 0; $i < count($tags); $i++) { ?>
-        <?php if ($i < (count($tags) - 1)) { ?>
-        <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>,
-        <?php } else { ?>
-        <a href="<?php echo $tags[$i]['href']; ?>"><?php echo $tags[$i]['tag']; ?></a>
-        <?php } ?>
-        <?php } ?>
-      </p>
       <?php } ?>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>

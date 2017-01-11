@@ -63,9 +63,9 @@
 									<input type="radio" name="payment_method" value="<%= payment_method.code %>" id="<%= payment_method.code %>" class="styled"  data-refresh="6"/>
 								<% } %>
 
-								<% if(parseInt(model.config.display_images)) { %>
+								<!-- <% if(parseInt(model.config.display_images)) { %>
 									<img class="payment-image" src="<%= payment_method.image %>" />
-								<% } %>
+								<% } %> -->
       
 								<%= payment_method.title %>
 								<span class="price"><%= payment_method.cost ? payment_method.cost : '' %></span>

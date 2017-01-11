@@ -12,10 +12,11 @@
 		  	<% if(f.type == "heading"){ %>
 
 	        	<% if(display) { %>
-			
-				<div id="<%= model.config.id %>_<%= f.id %>_heading" class="sort-item <%= f.id %> <%= f.class ? f.class : '' %>" data-sort="<%= f.sort_order %>">
+				
+				<div id="<%= model.config.id %>_<%= f.id %>_heading" class="sort-item <%= f.id %> <%= f.class ? f.class : '' %>" style="width:100%; float: right;" data-sort="<%= f.sort_order %>">
+					<hr/>
 				    <i class="fa fa-book"></i>
-				    <%= htmlDecode(f.title) %>
+				    <span style="font-size: 14px;"><%= htmlDecode(f.title) %></span>
 				    <hr/>
 				</div>
 			
@@ -38,8 +39,9 @@
 				</div>
 
 	    	<% }else if(f.type == "radio"){ %>
+	    		<% var cust = model.config.id + '_' + f.id; console.log('123' + cust);%>
 
-	    		<% if(f.options){ %>
+	    		<% if(f.options && cust !== 'payment_address_customer_group_id'){ %>
 			    	<div id="<%= model.config.id %>_<%= f.id %>_input" 
 				        class="radio-input form-group  sort-item <%= display ? '' : 'hidden' %> <%= f.class ? f.class : '' %> <%= require ? 'required' : '' %>" 
 				        data-sort="<%= f.sort_order %>">
@@ -70,8 +72,8 @@
 			    <% } %>
 
 	    	<% }else if(f.type == "checkbox"){ %>
-	    		
-
+	    		<% var agreement = model.config.id + '_' + f.id; %>
+	    		<% if( agreement !=='payment_address_agree' ){ %>
 			    <div id="<%= model.config.id %>_<%= f.id %>_input" 
 			    class="checkbox-input form-group sort-item <%= display ? '' : 'hidden' %> <%= f.class ? f.class : '' %> <%= require ? 'required' : '' %>" 
 			    data-sort="<%= f.sort_order %>">
@@ -117,7 +119,30 @@
 					        </label>
 					    </div>
 			    	<% } %>
-			    	
+			    <% } else if (agreement ==='payment_address_agree'){%>
+
+			    <div id="<%= model.config.id %>_<%= f.id %>_input" 
+			    class="checkbox-input form-group sort-item <%= display ? '' : 'hidden' %> <%= f.class ? f.class : '' %> <%= require ? 'required' : '' %>" 
+			    data-sort="<%= f.sort_order %>">
+			    	<div class="col-xs-12" style="display:none;">
+					      <label for="<%= model.config.id %>_<%= f.id %>" class="control-label" >
+						      <input type="hidden" 
+						          name="<%= model.config.id %>.<%= f.id %>" 
+						          value="0" />
+					          <input type="checkbox" checked="checked"
+					          autocomplete="<%= autocomplete %>" 
+					          name="<%= model.config.id %>.<%= f.id %>" 
+					          id="<%= model.config.id %>_<%= f.id %>" 
+					          class="validate <%= require ? 'required' : 'not-required' %>" 
+					          <%= require ? 'required' : '' %> 
+					          value="1" 
+					          <%= model[model.config.id][f.id] == 1 ? 'checked="checked"' : '' %> />
+
+					          <span <%= f.tooltip ? 'data-toggle="tooltip"' : '' %> title="<%= f.tooltip %>"><%= htmlDecode(f.title) %></span> 
+					        </label>
+					    </div>
+
+			    <% } %>
 
 			      
 			    </div>

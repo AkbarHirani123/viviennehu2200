@@ -5423,7 +5423,6 @@
 }
 #d_quickcheckout .panel-title {
   margin-top: -10px;
-  margin-bottom: 0;
   font-size: 16px;
   color: inherit;
 }
@@ -6725,7 +6724,7 @@
   padding: 7px 0px;
 }
 #d_quickcheckout label {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1.2px;
   font-weight: normal;
 }

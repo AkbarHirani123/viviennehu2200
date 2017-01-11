@@ -43,7 +43,7 @@
     <input type="button" value="<?php echo $button_confirm; ?>" id="button-confirm" class="btn btn-primary" />
   </div>
 </div>
-<script type="text/javascript"><!--
+<script type="text/javascript">
 $('#button-confirm').on('click', function() {
 	$.ajax({
 		url: 'index.php?route=payment/authorizenet_aim/send',
@@ -58,14 +58,15 @@ $('#button-confirm').on('click', function() {
 			$('#button-confirm').button('reset');
 		},
 		success: function(json) {
+
 			if (json['error']) {
 				alert(json['error']);
 			}
-
+      alert('Your order has been placed!\nIf you are logged in when you placed your order, please check your order history.\nIf you are not logged in, you will receieve an email shortly.');
 			if (json['redirect']) {
 				location = json['redirect'];
 			}
 		}
 	});
 });
-//--></script>
+</script>

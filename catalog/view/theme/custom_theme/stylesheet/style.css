@@ -782,3 +782,7 @@ footer .list-unstyled li {
 #cart-table-popup thead {
 	display: block;
 }
+
+.modal-backdrop {
+	position: relative;
+}

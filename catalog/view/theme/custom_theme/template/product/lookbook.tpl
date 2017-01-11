@@ -87,7 +87,8 @@
       <div class="row">
         <?php $sliderNextPrev = array(); ?>
         <?php $previous = null; ?>
-        <?php $next = next($products)['product_id']; ?>
+        <?php $next1 = next($products); ?>
+        <?php $next = $next1['product_id']; ?>
         <?php for ($i = 0; $i < count($products); $i++) { ?> 
           <?php $product = $products[$i]; ?>
           <?php if ($i < (count($products) - 1)) { ?>
