@@ -84,8 +84,8 @@
             <div class="image">
               <div id="pos-rel">
                 <a href="<?php echo $product['href']; ?>">
-                  <img src="<?php echo end($product['images']); ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive front-pic" />
-                  <img src="<?php echo $product['images'][1]; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" />
+                  <img src="image/placeholder-ripple.svg" data-original="<?php echo end($product['images']); ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive front-pic lazy" />
+                  <img src="image/placeholder-ripple.svg" data-original="<?php echo $product['images'][1]; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive lazy" />
                 </a>
               </div>
             </div>

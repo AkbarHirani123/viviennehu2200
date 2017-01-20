@@ -9,7 +9,6 @@ $_['text_edit']        = 'Edit Banner Module';
 
 // Entry
 $_['entry_name']       = 'Module Name';
-// $_['entry_banner_text'] = 'Banner Text';
 $_['entry_banner_long']= 'Banner Long';
 $_['entry_dimension']  = 'Dimension (W x H) and Resize Type';
 $_['entry_width']      = 'Width';

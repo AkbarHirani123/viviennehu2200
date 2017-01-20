@@ -226,6 +226,7 @@ div.pic img {
 .lookbook .col-sm-4, .product-thumb {
 	padding: 0 1px;
 	margin: 0;
+	margin-bottom: -2px;
 }
 
 .lookbook-info {
@@ -624,6 +625,13 @@ h3 {
 	position: relative !important;
 }
 
+#pos-rel img, 
+.lookbook-modal-button img {
+	width: 100%;
+	height: auto;
+	overflow: hidden
+}
+
 .carousel-control.left, .carousel-control.right {
 	background-color: transparent;
 	background-image: none;
@@ -646,7 +654,8 @@ h3 {
 
 .indicator {
 	height: 80vh;
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -658,11 +667,12 @@ h3 {
 .article-slide .carousel-indicators {
 	top: 0;
     left: 0;
-    margin-left: 20px;
+    margin-left: 30px;
     width: 100%;
     position: relative;
     display: block;
 }
+
 /* Indicators list style */
 .article-slide .carousel-indicators li {
     border: medium none;
@@ -747,6 +757,15 @@ footer .list-unstyled li {
 	text-align: center;
 }
 
+@media (max-width: 768px) {
+	footer .list-unstyled li {
+		display: inline-block;
+		width: 49%;
+		text-align: center;
+		padding: 3px;
+	}
+}
+
 #search-input {
 	display: none;
 	width: 125px;
@@ -785,4 +804,32 @@ footer .list-unstyled li {
 
 .modal-backdrop {
 	position: relative;
+}
+
+.lazy {
+	opacity: 0;
+	transition: opacity ease-out .6s;
+}
+
+.lazyloader {
+	opacity: 1;
+}
+
+.white {
+	color: white;
+	position: absolute;
+    top: 90vh;
+    letter-spacing: .9px;
+}
+
+.btn-new, .btn-new:hover, .btn-new:focus, .btn-new:active {
+    border: 1px solid #fff;
+    border-radius: 2px;
+    box-shadow: none;
+    outline:0;
+    background-color: transparent;
+    color: #fff;
+    position: absolute;
+    top: 82vh;
+	right: 49.6%;
 }

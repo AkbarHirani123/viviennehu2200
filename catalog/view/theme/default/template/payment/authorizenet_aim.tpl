@@ -62,7 +62,6 @@ $('#button-confirm').on('click', function() {
 			if (json['error']) {
 				alert(json['error']);
 			}
-      alert('Your order has been placed!\nIf you are logged in when you placed your order, please check your order history.\nIf you are not logged in, you will receieve an email shortly.');
 			if (json['redirect']) {
 				location = json['redirect'];
 			}

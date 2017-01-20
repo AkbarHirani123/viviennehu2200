@@ -40,16 +40,8 @@
           </div>
         </div> -->
       </div>
-      <?php if ($thumb || $description) { ?>
-      <div class="row">
-        <?php if ($thumb) { ?>
-        <div class="col-sm-2"></div>
-        <?php } ?>
-      </div>
-      <hr>
-      <?php } ?>
       <?php if ($categories) { ?>
-      <h3><?php echo $text_refine; ?></h3>
+      <hr/>
       <?php if (count($categories) <= 5) { ?>
       <div class="row">
         <div class="col-sm-3">
@@ -69,10 +61,10 @@
         <div class="col-sm-3">
           <ul>
             <?php foreach ($categories as $category) { ?>
-              <?php if ($category['image']) { echo $category['image']; ?>
+              <!-- <?php if ($category['image']) { echo $category['image']; ?>
                 <img src="<?php echo $category['image']; ?>" alt="<?php echo $heading_title; ?>" title="<?php echo $heading_title; ?>" class="img-thumbnail" />
-              <?php } ?>
-            <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+              <?php } ?> -->
+            <li style="padding-bottom: 10px;"><h3><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></h3></li>
             <?php } ?>
           </ul>
         </div>
@@ -99,11 +91,11 @@
         <div class="product-layout product-grid col-lg-3 col-md-3 col-sm-4 col-xs-6">
           <div class="product-thumb">
             <div class="image">
-              <?php include 'modal.tpl' ?>
-              <button class="modal-click lookbook-modal-button" id="<?php echo $product['product_id']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></button>
+              <button class="modal-click lookbook-modal-button" id="<?php echo $product['product_id']; ?>"><img data-original="image/placeholder-ripple.svg" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></button>
               <div class="corner">
                 <p><?php echo sprintf("%02d", $i + 1); ?></p>
               </div>
+              <?php include 'modal.tpl'; ?>
             </div>
             <div>
             </div>

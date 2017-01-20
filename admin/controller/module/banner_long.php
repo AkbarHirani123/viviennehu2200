@@ -28,7 +28,6 @@ class ControllerModuleBannerLong extends Controller {
 		$data['text_disabled'] = $this->language->get('text_disabled');
 
 		$data['entry_name'] = $this->language->get('entry_name');
-		// $data['entry_banner_text'] = $this->language->get('entry_banner_text');
 		$data['entry_banner_long'] = $this->language->get('entry_banner_long');
 		$data['entry_width'] = $this->language->get('entry_width');
 		$data['entry_height'] = $this->language->get('entry_height');

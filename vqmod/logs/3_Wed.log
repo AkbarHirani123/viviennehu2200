@@ -1,0 +1,14 @@
+---------- Date: 2017-01-11 12:13:09 ~ IP : 68.174.101.251 ----------
+REQUEST URI : /admin/index.php?route=extension/module&token=MJzRbqPgXbxOY4TQwnP4qu06v3b35bLu
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/2200/vqmod/xml/a_vqmod_d_quickcheckout.xml
+   id        : AJAX QUICK CHECKOUT V6 BY DREAMVENTION
+   version   : 2.0.0.0
+   vqmver    : 2.2.1
+   author    : dreamvention.com
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+----------------------------------------------------------------------
+
+

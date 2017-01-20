@@ -26,8 +26,6 @@
 	.nav li {
 		text-align: center;
 		padding-bottom: 5px;
-		display: inline-block;
-    	width: 20%;
 	}
 
 	.nav a {
@@ -68,6 +66,11 @@
 /* Media Query for desktop 300px screen to 748px */
 @media (min-width: 768px) {
 
+	.nav.navbar-nav > .row > li {
+		display: inline-block;
+    	width: 20%;
+	}
+
 	/* Logo size in the Navigation */
 	.logo {
 		width: 60%;
@@ -80,7 +83,7 @@
 	.dropdown:hover .dropdown-menu, .dropdown-toggle, .dropdown, .dropdown.open .dropdown-menu {
 		display: block;
 		margin: auto;
-		z-index: 10;	
+		/*z-index: 10;	*/
 	}
 
 	.dropdown .dropdown-menu {
@@ -99,6 +102,7 @@
 	.navbar-nav .dropdown-menu, .navbar-nav .open .dropdown-menu {
 		background-color: #fff;
 		min-width: 160px;
+		border: none;
 	}
 
 	.dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu {
@@ -112,7 +116,7 @@
 	    opacity: 1;
 	    visibility: visible;
 	    border: none;
-    	border-radius: 0px;
+	    border-radius: 0px;
 	}
 
 	/* make responsive image fit to li in navigation */
@@ -175,8 +179,6 @@
 	}
 
 	.dropdown-menu li {
-		display: block;
-		width: auto;
 		text-align: left;
 		padding-bottom: 3px;
 	}

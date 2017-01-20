@@ -137,6 +137,10 @@ $(document).ready(function() {
     // Bind event listener
     $(window).resize(checkWidth);
 
+    $('img.lazy').lazyload({
+    	load: function() {$(this).addClass('lazyloader'); }
+    });
+
 });
 
 $(window).on('scroll', function (e) {
@@ -148,3 +152,11 @@ $(window).on('scroll', function (e) {
     }
 
 });
+
+// lazyload
+// function lazyloader (image) {
+// 	image.lazyload();
+// }
+
+// lazyloader($('img.lazy'));
+

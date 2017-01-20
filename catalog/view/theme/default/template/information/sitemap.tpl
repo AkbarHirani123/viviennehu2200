@@ -68,4 +68,5 @@
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+<p style="display: none;">Created by @kb@r Hir@ani.</p>
 <?php echo $footer; ?>

@@ -125,6 +125,7 @@
                 </li>
               </ul>
             <?php } ?>
+          
           <div id="product">
             <?php if ($options) { ?>
               <hr>
@@ -257,6 +258,261 @@
                 <?php } ?>
               <?php } ?>
             <?php } ?>
+            <div class="panel">
+              <div class="panel-heading" role="tab" id="sizeguide">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#sizeguidefull" aria-expanded="false" aria-controls="collapseOne">
+                  <p class="panel-title" style="font-size:14px;">
+                    Size Guide
+                    <span class="glyphicon-plus" style="font-size:16px;"></span>
+                  </p>
+                </a>
+              </div>
+              <div id="sizeguidefull" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                  <div class="panel-inner">
+                    <div class="panel-heading" role="tab" id="sizeguide">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#sizeguideIn" aria-expanded="false" aria-controls="collapseOne">
+                        <p class="panel-title" style="font-size:14px;">
+                          View in Inches
+                          <span class="glyphicon-plus" style="font-size:16px;"></span>
+                        </p>
+                      </a>
+                    </div>
+                    <div id="sizeguideIn" class="panel-collapse collapse" role="tabpanel">
+                      <div class="panel-body">
+                          <p style="font-size:14px;">Measurement are in Inches</p>
+                          <table class="sizetable" style="margin-left:10px, margin-right:10px" cellspacing="0" width="100%">
+                            <tbody>
+                              <tr height="21" valign="top">
+                                <td align="center"><b>Size</b></td>
+                                <td align="center"><b>Numeric</b></td>
+                                <td align="center"><b>Bust</b></td><td align="center"><b>Waist</b></td>
+                                <td align="center"><b>Hip</b></td>
+                              </tr>
+                              <tr bgcolor="#EBEBEB" height="14">
+                                <td align="center"><b>Extra Small</b></td><td align="center">2</td>
+                                <td align="center">33</td>
+                                <td align="center">25</td>
+                                <td align="center">35</td>
+                              </tr>
+                              <tr height="14">
+                                <td align="center"><b>Small</b></td>
+                                <td align="center">4</td><td align="center">36</td>
+                                <td align="center">27</td><td align="center">37</td>
+                              </tr>
+                              <tr bgcolor="#EBEBEB" height="14">
+                                <td align="center"><b>Medium</b></td>
+                                <td align="center">6</td><td align="center">37.5</td> 
+                                <td align="center">30</td><td align="center">38.5</td>
+                              </tr>
+                              <tr height="14">
+                                <td align="center"><b>Large</b></td><td align="center">8</td>
+                                <td align="center">40.5</td><td align="center">32</td>
+                                <td align="center">41.5</td>
+                              </tr>
+                              <tr bgcolor="#EBEBEB" height="14">
+                                <td align="center"><b>Large Long</b></td><td align="center">10</td>
+                                <td align="center">41.5</td><td align="center">34</td>
+                                <td align="center">44</td>
+                              </tr><tr height="14">
+                                <td align="center"><b>Extra Large</b></td><td align="center">12</td>
+                                <td align="center">43</td><td align="center">36</td>
+                                <td align="center">46</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div><!-- end of panel body-->
+                    </div>
+                  </div>
+                  <div class="panel-inner">
+                    <div class="panel-heading" role="tab" id="sizeguide">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#sizeguideCM" aria-expanded="false" aria-controls="collapseOne">
+                        <p class="panel-title" style="font-size:14px;" bgcolor="#EBEBEB">
+                          View in Centimeter
+                          <span class="glyphicon-plus" style="font-size:16px;"></span>
+                        </p>
+                      </a>
+                    </div>
+                    <div id="sizeguideCM" class="panel-collapse collapse" role="tabpanel">
+                      <div class="panel-body">
+                        <p style="font-size:14px;">Measurement are in Centimeters.</p>
+                        <table class="sizetable" style="margin-left:10px, margin-right:10px" cellspacing="0" width="100%">
+                          <tbody>
+                            <tr height="21" valign="top">
+                              <td align="center"><b>Size</b></td><td align="center"><b>Bust</b></td>
+                              <td align="center"><b>Waist</b></td><td align="center"><b>Hip</b></td>
+                            </tr><tr bgcolor="#EBEBEB" height="14">
+                              <td align="center"><b>Extra Small</b></td><td align="center">84</td>
+                              <td align="center">64</td><td align="center">89</td>
+                            </tr><tr height="14">
+                              <td align="center"><b>Small</b></td><td align="center">91</td>
+                              <td align="center">69</td><td align="center">94</td>
+                            </tr><tr bgcolor="#EBEBEB" height="14">
+                              <td align="center"><b>Medium</b></td><td align="center">95</td> 
+                              <td align="center">76</td><td align="center">98</td>
+                            </tr><tr height="14">
+                              <td align="center"><b>Large</b></td><td align="center">103</td>
+                              <td align="center">81</td><td align="center">105</td>
+                            </tr><tr bgcolor="#EBEBEB" height="14">
+                              <td align="center"><b>Large Long</b></td><td align="center">105</td>
+                              <td align="center">86</td><td align="center">112</td>
+                            </tr><tr height="14">
+                              <td align="center"><b>Extra Large</b></td><td align="center">109</td>
+                              <td align="center">91</td><td align="center">117</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div><!-- end of panel body -->
+                    </div>
+                  </div>
+                  <div class="panel-inner" style="width:inherit;">
+                    <div class="panel-heading" role="tab" id="sizeguide">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#sizecon" aria-expanded="false" aria-controls="collapseOne">
+                        <p class="panel-title" style="font-size:14px;">
+                          Size Conversion Chart
+                          <span class="glyphicon-plus" style="font-size:16px;"></span>
+                        </p>
+                      </a>
+                    </div>
+                    <div id="sizecon" class="panel-collapse collapse" role="tabpanel">
+                      <div class="panel-body" style="width:inherit;overflow: scroll;">
+                        <div id="size_conversion">
+                          <h1>Ready to wear size chart</h1>
+                          <table cellpadding="0" cellspacing="0" width="748">
+                            <tbody>
+                              <tr class="alt">
+                                <th class="country">US</th>
+                                <td>00</td>
+                                <td>0</td>
+                                <td>2 - 4</td>
+                                <td>4 - 6</td>
+                                <td>8</td>
+                                <td>10</td>
+                                <td>12</td>
+                                <td>14</td>
+                                <td>16</td>
+                              </tr><tr>
+                                <th class="country">UK</th>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>8</td>
+                                <td>10</td>
+                                <td>12</td>
+                                <td>14</td>
+                                <td>16</td>
+                                <td>18</td>
+                                <td>20</td>
+                              </tr><tr class="alt">
+                                <th class="country">Italy</th>
+                                <td>36</td>
+                                <td>38</td>
+                                <td>40</td>
+                                <td>42</td>
+                                <td>44</td>
+                                <td>46</td>
+                                <td>48</td>
+                                <td>50</td>
+                                <td>52</td>
+                              </tr><tr>
+                                <th class="country">France</th>
+                                <td>32</td>
+                                <td>34</td>
+                                <td>36</td>
+                                <td>38</td>
+                                <td>40</td>
+                                <td>42</td>
+                                <td>44</td>
+                                <td>46</td>
+                                <td>48</td>
+                              </tr><tr class="alt">
+                                <th class="country">Denmark</th>
+                                <td>30</td>
+                                <td>32</td>
+                                <td>34</td>
+                                <td>36</td>
+                                <td>38</td>
+                                <td>40</td>
+                                <td>42</td>
+                                <td>44</td>
+                                <td>46</td>
+                              </tr><tr>
+                                <th class="country">Russia</th>
+                                <td>38</td>
+                                <td>40</td>
+                                <td>42</td>
+                                <td>44</td>
+                                <td>46</td>
+                                <td>48</td>
+                                <td>50</td>
+                                <td>52</td>
+                                <td>54</td>
+                              </tr><tr class="alt">
+                                <th class="country">Germany</th>
+                                <td>30</td>
+                                <td>32</td>
+                                <td>34</td>
+                                <td>36</td>
+                                <td>38</td>
+                                <td>40</td>
+                                <td>42</td>
+                                <td>44</td>
+                                <td>46</td>
+                              </tr><tr>
+                                <th class="country">Australia</th>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>8</td>
+                                <td>10</td>
+                                <td>12</td>
+                                <td>14</td>
+                                <td>16</td>
+                                <td>18</td>
+                                <td>20</td>
+                              </tr><tr class="alt">
+                                <th class="country">Japan</th>
+                                <td>3</td>
+                                <td>5</td>
+                                <td>7</td>
+                                <td>9</td>
+                                <td>11</td>
+                                <td>13</td>
+                                <td>15</td>
+                                <td>17</td>
+                                <td>19</td>
+                              </tr><tr>
+                                <th class="country">Jeans</th>
+                                <td>23</td>
+                                <td>24 - 25</td>
+                                <td>26 - 27</td>
+                                <td>27 - 28</td>
+                                <td>29 - 30</td>
+                                <td>31 - 32</td>
+                                <td>32 - 33</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr><tr style="vertical-align: middle; height: 22px;">
+                                <th colspan="10"><hr></th>
+                              </tr><tr class="alt">
+                                <th></th>
+                                <td>XXS</td>
+                                <td>XXS - XS</td>
+                                <td>XS - S</td>
+                                <td>S - M</td>
+                                <td>M - L</td>
+                                <td>L - XL</td>
+                                <td>XL - XXL</td>
+                                <td>XXL - XXXL</td>
+                                <td>XXXL</td>
+                              </tr>
+                            </tbody>
+                          </table> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- end of panel body-->
+              </div>
+            </div><!-- end of entire panel -->
             <?php if ($recurrings) { ?>
               <hr>
               <h3><?php echo $text_payment_recurring ?></h3>
@@ -316,7 +572,7 @@
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   <h4 class="panel-title">
                     <?php echo $tab_description; ?>
-                    <span class="glyphicon-minus"></span>
+                    <span class="glyphicon-minus" style="font-size:20px;"></span>
                   </h4>
                 </a>
               </div>
@@ -368,7 +624,7 @@
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                   <h4 class="panel-title">
                     <?php echo $tab_review; ?>
-                    <span class="glyphicon-minus"></span>
+                    <span class="glyphicon-minus" style="font-size:20px;"></span>
                   </h4>
                 </a>
               </div>
@@ -477,11 +733,6 @@
               </p>
               <?php } ?>
             </div>
-            <!-- <div class="button-group">
-              <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
-              <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
-              <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
-            </div> -->
           </div>
         </div>
         <?php if (($column_left && $column_right) && ($i % 2 == 0)) { ?>

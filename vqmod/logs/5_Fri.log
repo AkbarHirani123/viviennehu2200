@@ -1,0 +1,205 @@
+---------- Date: 2017-01-13 10:16:13 ~ IP : 68.174.101.251 ----------
+REQUEST URI : /admin/index.php?route=extension/installer&token=cjcOiXmI97axWasLXzoWWl3YGnEAZs1V
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/a_vqmod_d_quickcheckout.xml
+   id        : AJAX QUICK CHECKOUT V6 BY DREAMVENTION
+   version   : 2.0.0.0
+   vqmver    : 2.2.1
+   author    : dreamvention.com
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-13 10:18:13 ~ IP : 68.174.101.251 ----------
+REQUEST URI : /collections/FW14
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/a_vqmod_d_quickcheckout.xml
+   id        : AJAX QUICK CHECKOUT V6 BY DREAMVENTION
+   version   : 2.0.0.0
+   vqmver    : 2.2.1
+   author    : dreamvention.com
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/v2.2.0.x Changes.xml
+   id        : Changes and Fixes for OpenCart v2.2.0.x
+   version   : 1.0.4
+   vqmver    : 2.6.2
+   author    : Ralph James - Randem Systems
+
+File Name    : system/config/catalog.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): return $this->load->view($this->config->get('config_template') . '/template/payment/authorizenet_sim', $data);
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-13 10:18:14 ~ IP : 68.174.101.251 ----------
+REQUEST URI : /collections
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/v2.2.0.x Changes.xml
+   id        : Changes and Fixes for OpenCart v2.2.0.x
+   version   : 1.0.4
+   vqmver    : 2.6.2
+   author    : Ralph James - Randem Systems
+
+File Name    : catalog/model/total/reward.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): if ($this->model_account_customer->getRewardTotal($order_info['customer_id']) < $points) {
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-13 11:45:41 ~ IP : 68.174.101.251 ----------
+REQUEST URI : /admin/
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/a_vqmod_shopunity.xml
+   id        : d_shopunity
+   version   : 3.0.0
+   vqmver    : 2.1.1
+   author    : shopunity.net
+
+File Name    : admin/view/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="label label-danger pull-left"><?php echo $alerts; ?></span> <i class="fa fa-bell fa-lg"></i></a>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-13 12:00:03 ~ IP : 68.174.101.251 ----------
+REQUEST URI : /index.php?route=common/home
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/v2.2.0.x Changes.xml
+   id        : Changes and Fixes for OpenCart v2.2.0.x
+   version   : 1.0.4
+   vqmver    : 2.6.2
+   author    : Ralph James - Randem Systems
+
+File Name    : catalog/model/total/reward.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): if ($this->model_account_customer->getRewardTotal($order_info['customer_id']) < $points) {
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-13 12:00:12 ~ IP : 166.77.6.8 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/v2.2.0.x Changes.xml
+   id        : Changes and Fixes for OpenCart v2.2.0.x
+   version   : 1.0.4
+   vqmver    : 2.6.2
+   author    : Ralph James - Randem Systems
+
+File Name    : system/config/catalog.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): return $this->load->view($this->config->get('config_template') . '/template/payment/authorizenet_sim', $data);
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-13 12:00:17 ~ IP : 110.75.145.1 ----------
+REQUEST URI : /Ready-To-Wear/Dresses/daisy-vent
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/a_vqmod_d_quickcheckout.xml
+   id        : AJAX QUICK CHECKOUT V6 BY DREAMVENTION
+   version   : 2.0.0.0
+   vqmver    : 2.2.1
+   author    : dreamvention.com
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/v2.2.0.x Changes.xml
+   id        : Changes and Fixes for OpenCart v2.2.0.x
+   version   : 1.0.4
+   vqmver    : 2.6.2
+   author    : Ralph James - Randem Systems
+
+File Name    : system/config/catalog.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): return $this->load->view($this->config->get('config_template') . '/template/payment/authorizenet_sim', $data);
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-13 12:00:27 ~ IP : 110.75.145.2 ----------
+REQUEST URI : /collections/FW15/anglais-bau
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/v2.2.0.x Changes.xml
+   id        : Changes and Fixes for OpenCart v2.2.0.x
+   version   : 1.0.4
+   vqmver    : 2.6.2
+   author    : Ralph James - Randem Systems
+
+File Name    : system/config/catalog.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): return $this->load->view($this->config->get('config_template') . '/template/payment/authorizenet_sim', $data);
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-13 12:17:33 ~ IP : 110.75.145.2 ----------
+REQUEST URI : /collections/FW15/ivoire-lilly?sort=p.model&order=DESC
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/a_vqmod_d_quickcheckout.xml
+   id        : AJAX QUICK CHECKOUT V6 BY DREAMVENTION
+   version   : 2.0.0.0
+   vqmver    : 2.2.1
+   author    : dreamvention.com
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/v2.2.0.x Changes.xml
+   id        : Changes and Fixes for OpenCart v2.2.0.x
+   version   : 1.0.4
+   vqmver    : 2.6.2
+   author    : Ralph James - Randem Systems
+
+File Name    : system/config/catalog.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): return $this->load->view($this->config->get('config_template') . '/template/payment/authorizenet_sim', $data);
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-13 12:19:00 ~ IP : 110.75.145.1 ----------
+REQUEST URI : /VHNY/t-chaud?limit=40
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/v2.2.0.x Changes.xml
+   id        : Changes and Fixes for OpenCart v2.2.0.x
+   version   : 1.0.4
+   vqmver    : 2.6.2
+   author    : Ralph James - Randem Systems
+
+File Name    : system/config/catalog.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): return $this->load->view($this->config->get('config_template') . '/template/payment/authorizenet_sim', $data);
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-13 12:19:05 ~ IP : 110.75.145.2 ----------
+REQUEST URI : /Ready-To-Wear/Shirts-and-Tops?sort=p.price&order=ASC&limit=100
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/a_vqmod_d_quickcheckout.xml
+   id        : AJAX QUICK CHECKOUT V6 BY DREAMVENTION
+   version   : 2.0.0.0
+   vqmver    : 2.2.1
+   author    : dreamvention.com
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [system/library/tax.php] (SKIPPED)
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/v2.2.0.x Changes.xml
+   id        : Changes and Fixes for OpenCart v2.2.0.x
+   version   : 1.0.4
+   vqmver    : 2.6.2
+   author    : Ralph James - Randem Systems
+
+File Name    : system/config/catalog.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): return $this->load->view($this->config->get('config_template') . '/template/payment/authorizenet_sim', $data);
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-01-13 14:55:36 ~ IP : 110.75.145.2 ----------
+REQUEST URI : /index.php?route=account/address
+MOD DETAILS:
+   modFile   : /home/content/80/9820080/html/vqmod/xml/v2.2.0.x Changes.xml
+   id        : Changes and Fixes for OpenCart v2.2.0.x
+   version   : 1.0.4
+   vqmver    : 2.6.2
+   author    : Ralph James - Randem Systems
+
+File Name    : catalog/controller/account/address.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): } elseif (($custom_field['type'] == 'text' && !empty($custom_field['validation'] && $custom_field['location'] == 'address')) && !filter_var($this->request->post['custom_field'][$custom_field['custom_field_id']], FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => $custom_field['validation']))))
+----------------------------------------------------------------------
+
+

@@ -3,12 +3,12 @@
     <div class="social">
         <ul>
         <!-- <li>Follow Us:</li> -->
-        <li class="youtube"><a href="http://www.youtube.com/user/viviennehuoffical" target=""><img src="image/catalog/icons/youtube.png">Youtube</a></li>
-        <li class="facebook"><a href="http://www.facebook.com/pages/Vivienne-Hu/644049312275197" target=""><img src="image/catalog/icons/facebook.png">Facebook</a></li>
-        <li class="twitter"><a href="https://twitter.com/Vivienne_Hu" target=""><img src="image/catalog/icons/twitter.png">Twitter</a></li>
-        <li class="pinterest"><a href="http://pinterest.com/viviennehunj/" target=""><img src="image/catalog/icons/pinterest.png">Pinterest</a></li>
-        <li class="tumblr"><a href="http://viviennehu.tumblr.com" target=""><img src="image/catalog/icons/tumblr.png">Tumblr</a></li>
-        <li class="instagram"><a href="http://instagram.com/viviennehustudio" target=""><img src="image/catalog/icons/instragram.png">Instagram</a></li>
+        <li class="youtube"><a href="http://www.youtube.com/user/viviennehuoffical" target=""><img src="image/catalog/icons/youtube.png"><span class="hidden-xs">Youtube</span></a></li>
+        <li class="facebook"><a href="http://www.facebook.com/pages/Vivienne-Hu/644049312275197" target=""><img src="image/catalog/icons/facebook.png"><span class="hidden-xs">Facebook</span></a></li>
+        <li class="twitter"><a href="https://twitter.com/Vivienne_Hu" target=""><img src="image/catalog/icons/twitter.png"><span class="hidden-xs">Twitter</span></a></li>
+        <li class="pinterest"><a href="http://pinterest.com/viviennehunj/" target=""><img src="image/catalog/icons/pinterest.png"><span class="hidden-xs">Pinterest</span></a></li>
+        <li class="tumblr"><a href="http://viviennehu.tumblr.com" target=""><img src="image/catalog/icons/tumblr.png"><span class="hidden-xs">Tumblr</span></a></li>
+        <li class="instagram"><a href="http://instagram.com/viviennehustudio" target=""><img src="image/catalog/icons/instragram.png"><span class="hidden-xs">Instagram</span></a></li>
         </ul>
       </div>
     <div class="row">

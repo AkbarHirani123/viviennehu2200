@@ -31,6 +31,7 @@
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
 <script src="catalog/view/javascript/hoverIntent.min.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/jquery.lazyload.min.js" type="text/javascript"></script>
 <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
 <script src="catalog/view/javascript/index.js" type="text/javascript"></script>
 <?php foreach ($links as $link) { ?>
@@ -60,6 +61,9 @@
       </div>
       <div class="col-sm-4">
         <ul class="list-inline header-group pull-right">
+          <div class="pull-left advertisement hidden-sm hidden-md hidden-lg">
+          Free Shipping on Orders of $400 or more!
+          </div>
           <li><?php echo $search; ?></li>
           <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm" style="font-size:14px;"><?php echo $text_account; ?></span> <span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-right">
@@ -75,7 +79,10 @@
             </ul>
           </li>
           <li><?php echo $cart; ?></li>
-        </ul> 
+        </ul>
+        <div class="pull-right advertisement hidden-xs">
+        Free Shipping on Orders of $400 or more!
+        </div>
       </div>
     </div>
     <div class="row row-2">
@@ -105,7 +112,7 @@
                   <li><a href="<?php echo $category['href']; ?>"><?php echo strtoupper($category['name']); ?></a></li>
                   <?php } ?>
                   <?php } ?>
-                  <li><a href="">PRESS</a></li>
+                  <li><a href="https://viviennehu.com/press/">PRESS</a></li>
                 </div>
                 </ul>
               </div>

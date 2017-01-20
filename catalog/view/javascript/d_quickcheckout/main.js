@@ -26,7 +26,6 @@ qc.statistic = qc.statistic || {};
     };
 
 function preloaderStart(){
-  alert('here pre');
   $('#qc_confirm_order').prop('disabled', true);
   if(is_touch_device()){
     
@@ -42,7 +41,6 @@ function is_touch_device() {
 }
 
 function preloaderStop(){
-  alert('here stop');
   $('#qc_confirm_order').prop('disabled', false);
   $('.preloader').stop(true,true).fadeOut(300);
 }
